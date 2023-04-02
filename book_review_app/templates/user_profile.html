@@ -1,12 +1,222 @@
 <!DOCTYPE html>
+{% load static %}
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <title>Title</title>
+  <meta charset="UTF-8">
+  <title>Netflix Profile Page</title>
+  <link href="http://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.3.0/css/font-awesome.css" rel="stylesheet"  type='text/css'>
+  <link rel="stylesheet" href="{% static 'css/user_profile_style.css' %}">
 </head>
 <body>
-<a href="/subscription/">
-    <button type="button"> Subscription </button>
-</a>
+  <div class="container">
+    <header>
+      <nav>
+        <ul>
+          <li><a href="#">Browse</a></li>
+          <li><a href="#">Subscriptions</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <div class="profile">
+      <img src="https://i.pinimg.com/originals/ae/ec/c2/aeecc22a67dac7987a80ac0724658493.jpg" alt="Profile Picture" />
+      <h1>John chang</h1>
+    </div>
+    
+    <div class="bio">
+      <h2>About me</h2>
+      <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Veritatis quos rerum nobis possimus, consectetur a fugit commodi cum, eligendi, tenetur ipsum quas quod eveniet minus voluptatum expedita consequatur cumque! Neque similique dicta quasi rerum, veritatis facere corporis alias harum quod asperiores quibusdam itaque accusamus reprehenderit deleniti voluptates laudantium illum facilis!
+      </p>
+    </div>
+
+    <div class="actions">
+      <button class="edit-profile-btn">Edit Profile</button>
+      <button class="logout-btn">Log Out</button>
+    </div>
+
+    <div class="container-tabs-btn">
+      <h1 class="">Books Read</h1>
+      <h1 class="tab-under-view">Authors following</h1>
+    </div>
+
+    <div class="container-tabs">
+      <div class="books-read">
+        <div class="book-card">
+          <div class="card-item">
+            <img 
+              src="https://m.media-amazon.com/images/W/IMAGERENDERING_521856-T1/images/I/91Q5dCjc2KL.jpg" 
+              alt="The Da Vinci Code">
+            <div class="card-info">
+              <h2>The Da Vinci Code</h2>
+              <h3>Dan Brown</h3>
+              <div class="rate">
+                <i>ratings:</i> &nbsp;
+                <i class="fa fa-star" style="color: gold; font-size: 20px;"></i>
+                <i class="fa fa-star" style="color: gold; font-size: 20px;"></i>
+                <i class="fa fa-star" style="color: gold; font-size: 20px;"></i>
+                <i class="fa fa-star" style="color: gold; font-size: 20px;"></i>
+                <i class="fa fa-star-o" style="color: gold; font-size: 20px;"></i>
+              </div>
+              <p class="review">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Vitae, quo sunt voluptatibus numquam facere non maxime consectetur tempora suscipit sit?
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div class="book-card">
+          <div class="card-item">
+            <img 
+              src="https://www.adobe.com/express/create/cover/media_178ebed46ae02d6f3284c7886e9b28c5bb9046a02.jpeg?width=400&format=jpeg&optimize=medium" 
+              alt="The Da Vinci Code">
+            <div class="card-info">
+              <h2>The Da Vinci Code</h2>
+              <h3>Dan Brown</h3>
+              <div class="rate">
+                <i>ratings:</i> &nbsp;
+                <i class="fa fa-star" style="color: gold; font-size: 20px;"></i>
+                <i class="fa fa-star" style="color: gold; font-size: 20px;"></i>
+                <i class="fa fa-star-o" style="color: gold; font-size: 20px;"></i>
+                <i class="fa fa-star-o" style="color: gold; font-size: 20px;"></i>
+                <i class="fa fa-star-o" style="color: gold; font-size: 20px;"></i>
+              </div>
+              <p class="review">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatibus nemo itaque rem! Tenetur non odit maxime atque soluta enim quis fugiat dolor. Cum veritatis voluptatum deserunt natus nulla quaerat quod culpa esse ratione similique. Debitis corrupti molestias totam quo inventore, amet minima consequuntur quidem at culpa placeat nemo cumque neque eaque natus mollitia maxime accusamus non ipsa adipisci animi, porro cupiditate magnam in! Voluptates sit odit maiores ratione debitis nihil!
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div class="book-card">
+          <div class="card-item">
+            <img 
+              src="https://d1csarkz8obe9u.cloudfront.net/posterpreviews/contemporary-fiction-night-time-book-cover-design-template-1be47835c3058eb42211574e0c4ed8bf_screen.jpg?ts=1637012564" 
+              alt="The Da Vinci Code">
+            <div class="card-info">
+              <h2>The Da Vinci Code</h2>
+              <h3>Dan Brown</h3>
+              <div class="rate">
+                <i>ratings:</i> &nbsp;
+                <i class="fa fa-star" style="color: gold; font-size: 20px;"></i>
+                <i class="fa fa-star" style="color: gold; font-size: 20px;"></i>
+                <i class="fa fa-star" style="color: gold; font-size: 20px;"></i>
+                <i class="fa fa-star-o" style="color: gold; font-size: 20px;"></i>
+                <i class="fa fa-star-o" style="color: gold; font-size: 20px;"></i>
+              </div>
+              <p class="review">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatibus nemo itaque rem! Tenetur non odit maxime atque soluta enim quis fugiat dolor. Cum veritatis voluptatum deserunt natus nulla quaerat quod culpa esse ratione similique. Debitis corrupti molestias totam quo inventore, amet minima consequuntur quidem at culpa placeat nemo cumque neque eaque natus mollitia maxime accusamus non ipsa adipisci animi, porro cupiditate magnam in! Voluptates sit odit maiores ratione debitis nihil!
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div class="book-card">
+          <div class="card-item">
+            <img 
+              src="https://images.squarespace-cdn.com/content/v1/5ae2fce87e3c3ae275ea2c9f/1526464175408-W92Q4MSAM40I8YF4HM64/tess-cover.jpg?format=1500w" 
+              alt="The Da Vinci Code">
+            <div class="card-info">
+              <h2>The Da Vinci Code</h2>
+              <h3>Dan Brown</h3>
+              <div class="rate">
+                <i>ratings:</i> &nbsp;
+                <i class="fa fa-star" style="color: gold; font-size: 20px;"></i>
+                <i class="fa fa-star" style="color: gold; font-size: 20px;"></i>
+                <i class="fa fa-star" style="color: gold; font-size: 20px;"></i>
+                <i class="fa fa-star" style="color: gold; font-size: 20px;"></i>
+                <i class="fa fa-star" style="color: gold; font-size: 20px;"></i>
+              </div>
+              <p class="review">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatibus nemo itaque rem! Tenetur non odit maxime atque soluta enim quis fugiat dolor. Cum veritatis voluptatum deserunt natus nulla quaerat quod culpa esse ratione similique. Debitis corrupti molestias totam quo inventore, amet minima consequuntur quidem at culpa placeat nemo cumque neque eaque natus mollitia maxime accusamus non ipsa adipisci animi, porro cupiditate magnam in! Voluptates sit odit maiores ratione debitis nihil!
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div class="book-card">
+          <div class="card-item">
+            <img 
+              src="https://edit.org/images/cat/book-covers-big-2019101610.jpg" 
+              alt="The Da Vinci Code">
+            <div class="card-info">
+              <h2>The Da Vinci Code</h2>
+              <h3>Dan Brown</h3>
+              <div class="rate">
+                <i>ratings:</i> &nbsp;
+                <i class="fa fa-star" style="color: gold; font-size: 20px;"></i>
+                <i class="fa fa-star" style="color: gold; font-size: 20px;"></i>
+                <i class="fa fa-star" style="color: gold; font-size: 20px;"></i>
+                <i class="fa fa-star-o" style="color: gold; font-size: 20px;"></i>
+                <i class="fa fa-star-o" style="color: gold; font-size: 20px;"></i>
+              </div>
+              <p class="review">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatibus nemo itaque rem! Tenetur non odit maxime atque soluta enim quis fugiat dolor. Cum veritatis voluptatum deserunt natus nulla quaerat quod culpa esse ratione similique. Debitis corrupti molestias totam quo inventore, amet minima consequuntur quidem at culpa placeat nemo cumque neque eaque natus mollitia maxime accusamus non ipsa adipisci animi, porro cupiditate magnam in! Voluptates sit odit maiores ratione debitis nihil!
+              </p>
+            </div>
+          </div>
+        </div>
+
+      </div>
+      <div class="authors-following visible">
+
+        <div class="review-container">
+          <div class="review-card">  
+            <div class="card-item">
+              <img src="https://www.shutterstock.com/image-illustration/male-default-placeholder-avatar-profile-260nw-582566758.jpg" alt="The Da Vinci Code">
+              <div class="card-info">
+                <h2>Author 1</h2>
+                <div class="rate">
+                  <i>popularity:</i> &nbsp;
+                  <i class="fa fa-star" style="color: gold; font-size: 20px;"></i>
+                  <i class="fa fa-star" style="color: gold; font-size: 20px;"></i>
+                  <i class="fa fa-star" style="color: gold; font-size: 20px;"></i>
+                  <i class="fa fa-star" style="color: gold; font-size: 20px;"></i>
+                  <i class="fa fa-star" style="color: gold; font-size: 20px;"></i>
+                </div>
+              </div>
+            </div>
+          </div>
+
+            <div class="review-card">
+              <div class="card-item">
+                <img src="https://www.shutterstock.com/image-illustration/male-default-placeholder-avatar-profile-260nw-582566758.jpg" alt="The Da Vinci Code">
+                <div class="card-info">
+                  <h2>Author 2</h2>
+                  <div class="rate">
+                    <i>popularity:</i> &nbsp;
+                    <i class="fa fa-star" style="color: gold; font-size: 20px;"></i>
+                    <i class="fa fa-star" style="color: gold; font-size: 20px;"></i>
+                    <i class="fa fa-star" style="color: gold; font-size: 20px;"></i>
+                    <i class="fa fa-star" style="color: gold; font-size: 20px;"></i>
+                    <i class="fa fa-star" style="color: gold; font-size: 20px;"></i>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="review-card">
+              <div class="card-item">
+                <img src="https://www.shutterstock.com/image-illustration/male-default-placeholder-avatar-profile-260nw-582566758.jpg" alt="The Da Vinci Code">
+                <div class="card-info">
+                  <h2>Author 3</h2>
+                  <div class="rate">
+                    <i>popularity:</i> &nbsp;
+                    <i class="fa fa-star" style="color: gold; font-size: 20px;"></i>
+                    <i class="fa fa-star" style="color: gold; font-size: 20px;"></i>
+                    <i class="fa fa-star" style="color: gold; font-size: 20px;"></i>
+                    <i class="fa fa-star" style="color: gold; font-size: 20px;"></i>
+                    <i class="fa fa-star-o" style="color: gold; font-size: 20px;"></i>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+        </div>
+
+      </div>
+    </div>
+
+  </div>
 </body>
 </html>

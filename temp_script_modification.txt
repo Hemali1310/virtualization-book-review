@@ -1,0 +1,372 @@
+CREATE TABLE IF NOT EXISTS "public"."Author"
+(
+    author_id integer NOT NULL,
+    first_name character varying COLLATE pg_catalog."default" NOT NULL,
+    last_name character varying COLLATE pg_catalog."default" NOT NULL,
+    followers integer NOT NULL DEFAULT 0,
+    CONSTRAINT "Author_pkey" PRIMARY KEY (author_id)
+)
+
+TABLESPACE pg_default;
+
+ALTER TABLE IF EXISTS "public"."Author"
+    OWNER to postgres;
+
+COMMENT ON TABLE "public"."Author"
+    IS 'Details of Authors registered on site';
+
+
+
+
+
+
+
+CREATE TABLE IF NOT EXISTS "public"."Author_Books"
+(
+    "Author_author_id" integer NOT NULL,
+    "Books_book_id" integer NOT NULL,
+    CONSTRAINT "Author_Books_Author_author_id_fkey" FOREIGN KEY ("Author_author_id")
+        REFERENCES "public"."Author" (author_id) MATCH SIMPLE
+        ON UPDATE CASCADE
+        ON DELETE CASCADE
+        NOT VALID,
+    CONSTRAINT "Author_Books_Books_book_id_fkey" FOREIGN KEY ("Books_book_id")
+        REFERENCES "public"."Books" (book_id) MATCH SIMPLE
+        ON UPDATE CASCADE
+        ON DELETE CASCADE
+        NOT VALID
+)
+
+TABLESPACE pg_default;
+
+ALTER TABLE IF EXISTS "public"."Author_Books"
+    OWNER to postgres;
+
+
+
+
+
+-- Table: public.Books
+
+-- DROP TABLE IF EXISTS "public"."Books";
+
+CREATE TABLE IF NOT EXISTS "public"."Books"
+(
+    book_id integer NOT NULL,
+    category_id integer NOT NULL,
+    cover_image_url character varying COLLATE pg_catalog."default",
+    book_title character varying COLLATE pg_catalog."default" NOT NULL,
+    book_description character varying COLLATE pg_catalog."default",
+    book_softcopy_link character varying COLLATE pg_catalog."default",
+    CONSTRAINT "Books_pkey" PRIMARY KEY (book_id),
+    CONSTRAINT "Books_category_id_fkey" FOREIGN KEY (category_id)
+        REFERENCES "public"."Category" (category_id) MATCH SIMPLE
+        ON UPDATE CASCADE
+        ON DELETE CASCADE
+        NOT VALID
+)
+
+TABLESPACE pg_default;
+
+ALTER TABLE IF EXISTS "public"."Books"
+    OWNER to postgres;
+
+COMMENT ON TABLE "public"."Books"
+    IS 'Information about the books offered on the platform';
+
+
+
+
+
+-- Table: public.Books_Publisher
+
+-- DROP TABLE IF EXISTS "public"."Books_Publisher";
+
+CREATE TABLE IF NOT EXISTS "public"."Books_Publisher"
+(
+    "Books_book_id" integer NOT NULL,
+    "Publisher_publisher_id" integer NOT NULL,
+    CONSTRAINT "Books_Publisher_Books_book_id_fkey" FOREIGN KEY ("Books_book_id")
+        REFERENCES "public"."Books" (book_id) MATCH SIMPLE
+        ON UPDATE CASCADE
+        ON DELETE CASCADE
+        NOT VALID,
+    CONSTRAINT "Books_Publisher_Publisher_publisher_id_fkey" FOREIGN KEY ("Publisher_publisher_id")
+        REFERENCES "public"."Publisher" (publisher_id) MATCH SIMPLE
+        ON UPDATE CASCADE
+        ON DELETE CASCADE
+        NOT VALID
+)
+
+TABLESPACE pg_default;
+
+ALTER TABLE IF EXISTS "public"."Books_Publisher"
+    OWNER to postgres;
+
+
+
+
+
+-- Table: public.Category
+
+-- DROP TABLE IF EXISTS "public"."Category";
+
+CREATE TABLE IF NOT EXISTS "public"."Category"
+(
+    category_id integer NOT NULL,
+    category_name character varying COLLATE pg_catalog."default" NOT NULL,
+    CONSTRAINT "Category_pkey" PRIMARY KEY (category_id),
+    CONSTRAINT "Category_category_name_key" UNIQUE (category_name),
+    CONSTRAINT category_name UNIQUE (category_name)
+)
+
+TABLESPACE pg_default;
+
+ALTER TABLE IF EXISTS "public"."Category"
+    OWNER to postgres;
+
+
+
+
+
+-- Table: public.Feed
+
+-- DROP TABLE IF EXISTS "public"."Feed";
+
+CREATE TABLE IF NOT EXISTS "public"."Feed"
+(
+    feed_id integer NOT NULL,
+    user_id integer NOT NULL,
+    image_url character varying COLLATE pg_catalog."default",
+    description character varying COLLATE pg_catalog."default",
+    upvotes integer DEFAULT 0,
+    CONSTRAINT "Feed_pkey" PRIMARY KEY (feed_id),
+    CONSTRAINT "Feed_user_id_fkey" FOREIGN KEY (user_id)
+        REFERENCES "public"."User" (user_id) MATCH SIMPLE
+        ON UPDATE CASCADE
+        ON DELETE CASCADE
+        NOT VALID
+)
+
+TABLESPACE pg_default;
+
+ALTER TABLE IF EXISTS "public"."Feed"
+    OWNER to postgres;
+
+COMMENT ON TABLE "public"."Feed"
+    IS 'Feeds/Posts of a user on the platform';
+
+
+
+
+
+-- Table: public.Offer
+
+-- DROP TABLE IF EXISTS "public"."Offer";
+
+CREATE TABLE IF NOT EXISTS "public"."Offer"
+(
+    offer_id integer NOT NULL,
+    offer_name character varying COLLATE pg_catalog."default" NOT NULL,
+    description character varying COLLATE pg_catalog."default" NOT NULL,
+    start_date date NOT NULL,
+    end_date date NOT NULL,
+    CONSTRAINT "Offer_pkey" PRIMARY KEY (offer_id)
+)
+
+TABLESPACE pg_default;
+
+ALTER TABLE IF EXISTS "public"."Offer"
+    OWNER to postgres;
+
+COMMENT ON TABLE "public"."Offer"
+    IS 'Information on Offeres available on the platform';
+
+
+
+
+
+-- Table: public.Publisher
+
+-- DROP TABLE IF EXISTS "public"."Publisher";
+
+CREATE TABLE IF NOT EXISTS "public"."Publisher"
+(
+    publisher_id integer NOT NULL,
+    publisher_name character varying COLLATE pg_catalog."default" NOT NULL,
+    email character varying COLLATE pg_catalog."default" NOT NULL,
+    CONSTRAINT "Publisher_pkey" PRIMARY KEY (publisher_id),
+    CONSTRAINT publisher_name UNIQUE (publisher_name)
+)
+
+TABLESPACE pg_default;
+
+ALTER TABLE IF EXISTS "public"."Publisher"
+    OWNER to postgres;
+
+COMMENT ON TABLE "public"."Publisher"
+    IS 'Details about various book publications available on the platform';
+
+
+
+
+
+-- Table: public.Publisher_User
+
+-- DROP TABLE IF EXISTS "public"."Publisher_User";
+
+CREATE TABLE IF NOT EXISTS "public"."Publisher_User"
+(
+    "Publisher_publisher_id" integer NOT NULL,
+    "User_user_id" integer NOT NULL,
+    CONSTRAINT "Publisher_User_Publisher_publisher_id_fkey" FOREIGN KEY ("Publisher_publisher_id")
+        REFERENCES "public"."Publisher" (publisher_id) MATCH SIMPLE
+        ON UPDATE CASCADE
+        ON DELETE CASCADE
+        NOT VALID,
+    CONSTRAINT "Publisher_User_User_user_id_fkey" FOREIGN KEY ("User_user_id")
+        REFERENCES "public"."User" (user_id) MATCH SIMPLE
+        ON UPDATE CASCADE
+        ON DELETE CASCADE
+        NOT VALID
+)
+
+TABLESPACE pg_default;
+
+ALTER TABLE IF EXISTS "public"."Publisher_User"
+    OWNER to postgres;
+
+
+
+
+
+-- Table: public.Review
+
+-- DROP TABLE IF EXISTS "public"."Review";
+
+CREATE TABLE IF NOT EXISTS "public"."Review"
+(
+    review_id integer NOT NULL,
+    user_id integer NOT NULL,
+    book_id integer NOT NULL,
+    reviews character varying COLLATE pg_catalog."default" NOT NULL,
+    upvotes integer NOT NULL DEFAULT 0,
+    downvotes integer NOT NULL DEFAULT 0,
+    CONSTRAINT "Review_pkey" PRIMARY KEY (review_id),
+    CONSTRAINT book_id FOREIGN KEY (book_id)
+        REFERENCES "public"."Books" (book_id) MATCH FULL
+        ON UPDATE CASCADE
+        ON DELETE CASCADE
+        NOT VALID,
+    CONSTRAINT user_id FOREIGN KEY (user_id)
+        REFERENCES "public"."User" (user_id) MATCH FULL
+        ON UPDATE CASCADE
+        ON DELETE CASCADE
+        NOT VALID
+)
+
+TABLESPACE pg_default;
+
+ALTER TABLE IF EXISTS "public"."Review"
+    OWNER to postgres;
+
+COMMENT ON TABLE "public"."Review"
+    IS 'Details about the user reviews, rating and likes on a book';
+
+COMMENT ON CONSTRAINT user_id ON "public"."Review"
+    IS 'Reference to user_id column in Users table';
+
+
+
+
+
+-- Table: public.Subscriptions
+
+-- DROP TABLE IF EXISTS "public"."Subscriptions";
+
+CREATE TABLE IF NOT EXISTS "public"."Subscriptions"
+(
+    subscription_id integer NOT NULL,
+    subscription_name character varying COLLATE pg_catalog."default" NOT NULL,
+    duration integer NOT NULL,
+    price integer NOT NULL,
+    subscribers integer NOT NULL,
+    offer_id integer NOT NULL,
+    CONSTRAINT "Subscriptions_pkey" PRIMARY KEY (subscription_id),
+    CONSTRAINT subscriber_name UNIQUE (subscription_name),
+    CONSTRAINT "Subscriptions_offer_id_fkey" FOREIGN KEY (offer_id)
+        REFERENCES "public"."Offer" (offer_id) MATCH SIMPLE
+        ON UPDATE CASCADE
+        ON DELETE CASCADE
+        NOT VALID
+)
+
+TABLESPACE pg_default;
+
+ALTER TABLE IF EXISTS "public"."Subscriptions"
+    OWNER to postgres;
+
+COMMENT ON TABLE "public"."Subscriptions"
+    IS 'Subscription Tiers available on the platform';
+
+
+
+
+
+-- Table: public.User
+
+-- DROP TABLE IF EXISTS "public"."User";
+
+CREATE TABLE IF NOT EXISTS "public"."User"
+(
+    user_id integer NOT NULL,
+    first_name character varying COLLATE pg_catalog."default" NOT NULL,
+    last_name character varying COLLATE pg_catalog."default" NOT NULL,
+    email character varying COLLATE pg_catalog."default" NOT NULL,
+    password character varying COLLATE pg_catalog."default" NOT NULL,
+    subscription_id integer,
+    fellow_reviewers integer NOT NULL DEFAULT 0,
+    CONSTRAINT "User_pkey" PRIMARY KEY (user_id),
+    CONSTRAINT "User_subscription_id_fkey" FOREIGN KEY (subscription_id)
+        REFERENCES "public"."Subscriptions" (subscription_id) MATCH SIMPLE
+        ON UPDATE CASCADE
+        ON DELETE CASCADE
+        NOT VALID
+)
+
+TABLESPACE pg_default;
+
+ALTER TABLE IF EXISTS "public"."User"
+    OWNER to postgres;
+
+COMMENT ON TABLE "public"."User"
+    IS 'Customers of the application';
+
+
+
+
+
+-- Table: public.User_Author
+
+-- DROP TABLE IF EXISTS "public"."User_Author";
+
+CREATE TABLE IF NOT EXISTS "public"."User_Author"
+(
+    "User_user_id" integer NOT NULL,
+    "Author_author_id" integer NOT NULL,
+    CONSTRAINT "User_Author_Author_author_id_fkey" FOREIGN KEY ("Author_author_id")
+        REFERENCES "public"."Author" (author_id) MATCH SIMPLE
+        ON UPDATE CASCADE
+        ON DELETE CASCADE
+        NOT VALID,
+    CONSTRAINT "User_Author_User_user_id_fkey" FOREIGN KEY ("User_user_id")
+        REFERENCES "public"."User" (user_id) MATCH SIMPLE
+        ON UPDATE CASCADE
+        ON DELETE CASCADE
+        NOT VALID
+)
+
+TABLESPACE pg_default;
+
+ALTER TABLE IF EXISTS "public"."User_Author"
+    OWNER to postgres;

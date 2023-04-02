@@ -1675,3 +1675,45 @@ Not Found: /favicon.ico
 "GET /favicon.ico HTTP/1.1" 404 3100
 Not Found: /favicon.ico
 "GET /favicon.ico HTTP/1.1" 404 3100
+Not Found: /favicon.ico
+"GET /favicon.ico HTTP/1.1" 404 3100
+Session data corrupted
+Session data corrupted
+Session data corrupted
+Session data corrupted
+Session data corrupted
+Not Found: /favicon.ico
+"GET /favicon.ico HTTP/1.1" 404 3100
+"GET /static/application/css/book_review_page_style.css HTTP/1.1" 404 1885
+"GET /static/book_review_app/css/book_review_page_style.css HTTP/1.1" 404 1897
+"GET /static/book_review_app/css/book_review_page_style.css HTTP/1.1" 404 1897
+"GET /static/book_review_app/css/book_review_page_style.css HTTP/1.1" 404 1897
+"GET /static/book_review_app/css/book_review_page_style.css HTTP/1.1" 404 1897
+"GET /static/book_review_app/css/book_review_page_style.css HTTP/1.1" 404 1897
+"GET /static/book_review_app/css/book_review_page_style.css HTTP/1.1" 404 1897
+"GET /static/book_review_app/css/book_review_page_style.css HTTP/1.1" 404 1897
+"GET /static/book_review_app/css/book_review_page_style.css HTTP/1.1" 404 1897
+"GET /static/book_review_app/css/book_review_page_style.css HTTP/1.1" 404 1897
+"GET /static/book_review_app/css/book_review_page_style.css HTTP/1.1" 404 1897
+"GET /static/book_review_app/css/book_review_page_style.css HTTP/1.1" 404 1897
+"GET /static/book_review_app/css/book_review_page_style.css HTTP/1.1" 404 1897
+"GET /static/book_review_app/css/book_review_page_style.css HTTP/1.1" 404 1897
+"GET /static/book_review_app/css/book_review_page_style.css HTTP/1.1" 404 1897
+"GET /static/book_review_app/css/book_review_page_style.css HTTP/1.1" 404 1897
+"GET /static/book_review_app/css/book_review_page_style.css HTTP/1.1" 404 1897
+"GET /static/book_review_app/css/book_review_page_style.css HTTP/1.1" 404 1897
+"GET /static/book_review_app/css/book_review_page_style.css HTTP/1.1" 404 1897
+"GET /static/book_review_app/css/book_review_page_style.css HTTP/1.1" 404 1897
+"GET /static/book_review_app/css/book_review_page_style.css HTTP/1.1" 404 1897
+"GET /static/book_review_app/css/book_review_page_style.css HTTP/1.1" 404 1897
+"GET /static/book_review_app/css/book_review_page_style.css HTTP/1.1" 404 1897
+"GET /static/book_review_app/css/book_review_page_style.css HTTP/1.1" 404 1897
+"GET /static/book_review_app/css/book_review_page_style.css HTTP/1.1" 404 1897
+"GET /static/book_review_app/css/book_review_page_style.css HTTP/1.1" 404 1897
+"GET /static/book_review_app/css/book_review_page_style.css HTTP/1.1" 404 1897
+"GET /static/book_review_app/css/book_review_page_style.css HTTP/1.1" 404 1897
+Not Found: /bowse
+"GET /bowse HTTP/1.1" 404 3082
+Not Found: /browse/brose_script.js
+"GET /browse/brose_script.js HTTP/1.1" 404 3133
+"GET /static/css/hero.jpg HTTP/1.1" 404 1795
