@@ -26,11 +26,13 @@
     
     <div class="container">
         <div class="book-image-container">
-            <img id="book-image" src="https://m.media-amazon.com/images/W/IMAGERENDERING_521856-T1/images/I/91Q5dCjc2KL.jpg" 
-              alt="The Da Vinci Code">
-            <button>
-                Link to Book
-            </button>
+            <img id="book-image" src="{{book.cover_image_url}}" 
+              alt="{{book.book_title}}">
+              <a href="{{book.book_softcopy_link}}">  
+                <button class="btn">
+                  Link to Book
+                </button>
+              </a>
             <div class="rate">
                 <i class="fa fa-star-o" style="font-size:medium; color: gold; font-size: 40px;"></i>
                 <i class="fa fa-star-o" style="font-size:medium; color: gold; font-size: 40px;"></i>
@@ -42,22 +44,32 @@
 
         <div class="book-info">
             <div class="book-details">
-                <h1 id="book-title">The Da Vinci Code</h1>
-                <h3 id="book-author"><i>Author(s): </i>Dan Brown</h3>
-                <h5 id="book-publishers"><i>publisher(s): </i>Doubleday (US)</h5>
+                <h1 id="book-title">{{book.book_title}}</h1>
+                <h3 id="book-author"><i>Author(s): </i>
+                  {% for author in authors %}
+                    {{author}}
+                  {% endfor %}
+                </h3>
+                <h5 id="book-publishers"><i>publisher(s): </i>
+                  {% for publisher in publishers %}
+                    {{publisher}}
+                  {% endfor %}
+                </h5>
                 <div class="book-rating">
                     <h3>Overall ratings: </h3>
                     <div class="rate">
-                        <i class="fa fa-star" style="color: gold; font-size: 20px;"></i>
-                        <i class="fa fa-star" style="color: gold; font-size: 20px;"></i>
-                        <i class="fa fa-star" style="color: gold; font-size: 20px;"></i>
-                        <i class="fa fa-star" style="color: gold; font-size: 20px;"></i>
-                        <i class="fa fa-star-o" style="color: gold; font-size: 20px;"></i>
+                        {% for i in "....." %}
+                          {% if forloop.counter < rating %}
+                            <i class="fa fa-star" style="color: gold; font-size: 20px;"></i>
+                          {% else %}
+                            <i class="fa fa-star-o" style="color: gold; font-size: 20px;"></i>
+                          {% endif %}
+                        {% endfor %}
                     </div>
                 </div>
                 <div class="book-description">
                     <p>
-                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolorem ipsum temporibus a itaque eligendi cupiditate iste facere, expedita sit similique rerum excepturi et maxime qui. Odio eligendi sunt sit inventore cum ea temporibus rerum voluptatem sequi id similique nisi culpa unde eum qui, saepe vel repellat nulla aliquam animi velit. Vero dolorem quam mollitia placeat harum deserunt nesciunt ullam iure vitae aut facere architecto, iusto officia distinctio molestiae excepturi aperiam quas cupiditate facilis debitis ducimus accusantium veritatis assumenda. Libero adipisci porro, ad doloribus neque autem accusantium consequatur excepturi aliquam modi velit perspiciatis, delectus, nam molestias veniam blanditiis explicabo ipsa officia?
+                      {{book.book_description}}
                     </p>
                 </div>
             </div>
@@ -95,7 +107,8 @@
 
             <div class="user-review">
                 <i>What do you think?</i>
-                <textarea placeholder="Share your thougts....."></textarea>
+                <textarea placeholder=" Share your thougts....." style="margin-top:10px;"></textarea>
+                <button class="btn" style="margin-top:10px; width:10%; padding: 5px; font-weight: 800; border-radius: 5px ;">Submit</button>
             </div>
 
             <div class="review-container">

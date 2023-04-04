@@ -107,7 +107,6 @@
             <a href="#">Read Review</a>
           </div>
         </div>
-        <!-- <button class="btn">See More</button> -->
       </section>
 
       <section class="categorie-type">
@@ -162,10 +161,25 @@
             <a href="#">Read Review</a>
           </div>
         </div>
-        <!-- <button class="btn">See More</button> -->
       </section>
 
+      {% for category, book_list in books.items %}
       <section class="categorie-type">
+        <h2>{{category}}</h2>
+        <div class="card">
+        {% for book in book_list %}
+          <div class="card-item">
+            <img src="{{book.image}}" alt="{{book.title}}">
+            <h3>{{book.title}}</h3>
+            <p>{{book.description}}</p>
+            <a href="/book_review/{{book.id}}">Read Review</a>
+          </div>
+        {% endfor %}
+        </div>
+      </section>
+      {% endfor %}
+
+      <!-- <section class="categorie-type">
         <h2>Horror</h2>
         <div class="card">
           <div class="card-item">
@@ -217,7 +231,6 @@
             <a href="#">Read Review</a>
           </div>
         </div>
-        <!-- <button class="btn">See More</button> -->
       </section>
 
       <section class="categorie-type">
@@ -272,7 +285,6 @@
             <a href="#">Read Review</a>
           </div>
         </div>
-        <!-- <button class="btn">See More</button> -->
       </section>
 
       <section class="categorie-type">
@@ -327,8 +339,7 @@
             <a href="#">Read Review</a>
           </div>
         </div>
-        <!-- <button class="btn">See More</button> -->
-      </section>
+      </section> -->
 
     </div>
 

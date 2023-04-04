@@ -23,7 +23,7 @@ urlpatterns = [
     path('login/', login_page),
     path('signup/', signup_page),
     path('browse/', browse_page),
-    path('book_review/', book_review_page),
+    path('book_review/<int:id>/', book_review_page),
     path('user_profile/', user_profile),
     path('author_profile/', author_profile),
     path('subscription/', subscription),
