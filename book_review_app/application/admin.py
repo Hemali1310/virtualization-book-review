@@ -14,3 +14,8 @@ admin.site.register(UserAuthor)
 admin.site.register(PublisherUser)
 admin.site.register(BooksPublisher)
 admin.site.register(AuthorBooks)
+
+
+def author_list(request):
+    authors = Author.objects.all()
+    return render(request, 'home.html', {'author': authors})

@@ -132,13 +132,14 @@ class Subscriptions(models.Model):
 
 
 class User(models.Model):
-    user_id = models.IntegerField(primary_key=True)
+    user_id = models.AutoField(primary_key=True)
     first_name = models.CharField(max_length=255)
     last_name = models.CharField(max_length=255)
     email = models.CharField(max_length=255)
     password = models.CharField(max_length=255)
     subscription = models.ForeignKey(Subscriptions, models.CASCADE, blank=True, null=True)
-    fellow_reviewers = models.IntegerField()
+    fellow_reviewers = models.IntegerField(null=True)
+    username = models.CharField(unique=True, max_length=255)
 
     class Meta:
         managed = False
