@@ -4,4 +4,3 @@ Django
 python-decouple
 psycopg2
 psycopg2-binary
-hemali
