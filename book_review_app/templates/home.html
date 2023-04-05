@@ -1,16 +1,68 @@
-<!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-    <meta charset="UTF-8">
-    <title>{{ title }}</title>
+    <title>Book Review</title>
+    {% load static %}
+    <link rel="stylesheet" type='text/css' href="{% static 'css/style.css' %}">
 </head>
 <body>
-<h1> Home page </h1>
-<a href="login/">
-    <button type="button"> Login </button>
-</a>
-<a href="signup/">
-    <button type="button"> Signup </button>
-</a>
+    <div class="navbar">
+        <div class="logo">
+            <h1><a href="#">BookFlix</a></h1>
+        </div>
+        <a href="/login/">
+        <li class="buttons"> Log In </li>
+        </a>
+    </div>
+    <div class="main">
+        <div class="area">
+            <h1>Read, Review, Repeat!</h1>
+            <h3>Discover new books and share your thoughts with our community of book lovers.</h3>
+            <div class="search">
+                <input type="text" class="box" placeholder="Email">
+                <span class="try">Try login to get new books review <i class="fas fa-chevron-right"></i></span>
+            </div>
+            <h4>Ready to read the books and reviews? Enter your email to create or access your account
+            </h4>
+        </div>
+    </div>
+    <div class="container1">
+        <div class="text">
+            <h1>A captivating page-turner</h1>
+            <p>
+                Gripping plot full of twists and turns, <br>
+                that keeps readers engaged from start <br>
+                to finish.
+            </p>
+        </div>
+        <div class="image">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/d/d6/Louis_Fran%C3%A7ais-Dant%C3%A8s_sur_son_rocher.jpg">
+        </div>
+    </div>
+    <div class="footer">
+        <div class="footercon">
+            <div class="flex1">
+                <h5>Questions?
+                </h5>
+                <h5>
+                </h5>
+            </div>
+            <ul class="list1">
+                <li><a href="">FAQ</a></li>
+                <li><a href="">Investor Relation</a></li>
+                <li><a href="">Corporate Information</a></li>
+            </ul>
+            <ul class="list1">
+                <li><a href="">Home</a></li>
+                <li><a href="">Jobs</a></li>
+                <li><a href="">Contact Us</a></li>
+            </ul>
+            <ul class="list1">
+                <li><a href="">Account</a></li>
+                <li><a href="">Redeem Gift Cards</a></li>
+                <li><a href="">Privacy</a></li>
+            </ul>
+        </div>
+    </div>
 </body>
 </html>
+
