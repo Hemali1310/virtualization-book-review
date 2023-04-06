@@ -1,15 +1,351 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Title</title>
-</head>
-<body>
-<a href="/user_profile/">
-    <button type="button"> User Profile </button>
-</a>
-<a href="/book_review/">
-    <button type="button"> Books </button>
-</a>
+{% load static %}
+<html>
+  <head>
+    <title>BookFlix</title>
+    <link rel="stylesheet" href="{% static 'css/browse_style.css' %}"/>
+    <script type="text/javascript" src="brose_script.js"></script>
+  </head>
+  <body>
+
+    <!-- Nav bar -->
+    <header class="header">
+      <div class="logo">BookFlix</div>
+      <nav class="nav">
+        <a href="#">Home</a>
+        <a href="#">Reviews</a>
+        <a href="#">Genres</a>
+        <a href="#">Best Sellers</a>
+        <a href="#">About Us</a>
+      </nav>
+    </header>
+
+    <!-- Slider  -->
+    <section class="hero">
+      
+      <div class="slider-container">
+        <div class="slider">
+          <div class="slide"><img src="https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1664015043i/61885098.jpg" alt="Slide 1"></div>
+          <div class="slide"><img src="https://kbimages1-a.akamaihd.net/6c05493f-e4d4-44cd-81f6-4212201617c8/353/569/90/False/the-last-girl-to-die-1.jpg" alt="Slide 2"></div>
+          <div class="slide"><img src="https://i0.wp.com/ken-follett.com/wp-content/uploads/2021/04/Never-US-Cover-1-e1618493056869.jpg?fit=750%2C1159&ssl=1" alt="Slide 3"></div>
+          <div class="slide"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT57h5pD1UlY3Cq38hzbYd2jNFQofbgg9JW2Q&usqp=CAU" alt="Slide 4"></div>
+          <!-- <div class="slide"><img src="https://via.placeholder.com/150x225.png?text=Slide%205" alt="Slide 5"></div> -->
+          <!-- <div class="slide"><img src="https://via.placeholder.com/150x225.png?text=Slide%201" alt="Slide 1"></div> -->
+          <!-- <div class="slide"><img src="https://via.placeholder.com/150x225.png?text=Slide%202" alt="Slide 2"></div> -->
+          <!-- <div class="slide"><img src="https://via.placeholder.com/150x225.png?text=Slide%203" alt="Slide 3"></div> -->
+          <!-- <div class="slide"><img src="https://via.placeholder.com/150x225.png?text=Slide%204" alt="Slide 4"></div> -->
+          <!-- <div class="slide"><img src="https://via.placeholder.com/150x225.png?text=Slide%205" alt="Slide 5"></div> -->
+          <!-- <div class="slide"><img src="https://via.placeholder.com/150x225.png?text=Slide%201" alt="Slide 1"></div> -->
+          <!-- <div class="slide"><img src="https://via.placeholder.com/150x225.png?text=Slide%202" alt="Slide 2"></div> -->
+          <!-- <div class="slide"><img src="https://via.placeholder.com/150x225.png?text=Slide%203" alt="Slide 3"></div> -->
+          <!-- <div class="slide"><img src="https://via.placeholder.com/150x225.png?text=Slide%204" alt="Slide 4"></div> -->
+          <!-- <div class="slide"><img src="https://via.placeholder.com/150x225.png?text=Slide%205" alt="Slide 5"></div> -->
+        </div>
+      </div>      
+
+      <!-- <h1>Read, Review, Repeat.</h1>
+      <p>Discover new books and share your thoughts with our community of book lovers.</p>
+      <button class="btn">Get Started</button> -->
+    </section>
+
+    <div class="categories">
+
+      <section class="categorie-type">
+        <h2>You May Like</h2>
+        <div class="card">
+          <div class="card-item">
+            <img src="https://www.adobe.com/express/create/cover/media_178ebed46ae02d6f3284c7886e9b28c5bb9046a02.jpeg?width=400&format=jpeg&optimize=medium" alt="Book 1">
+            <h3>Book Title 1</h3>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugiat, vero! Aut nisi aperiam quaerat. Soluta optio voluptas perspiciatis a atque accusantium maxime doloribus ipsa quasi, vel vitae beatae asperiores consectetur dignissimos rerum illo. Rem ea dolor explicabo officia. Accusantium accusamus esse, delectus debitis iusto autem vitae! Distinctio quidem illum ipsa! </p>
+            <a href="#">Read Review</a>
+          </div>
+          <div class="card-item">
+            <img src="https://d1csarkz8obe9u.cloudfront.net/posterpreviews/contemporary-fiction-night-time-book-cover-design-template-1be47835c3058eb42211574e0c4ed8bf_screen.jpg?ts=1637012564" alt="Book 2">
+            <h3>Book Title 2</h3>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugiat, vero! Aut nisi aperiam quaerat. Soluta optio voluptas perspiciatis a atque accusantium maxime doloribus ipsa quasi, vel vitae beatae asperiores consectetur dignissimos rerum illo. Rem ea dolor explicabo officia. Accusantium accusamus esse, delectus debitis iusto autem vitae! Distinctio quidem illum ipsa! </p>
+            <a href="#">Read Review</a>
+          </div>
+          <div class="card-item">
+            <img src="https://images.squarespace-cdn.com/content/v1/5ae2fce87e3c3ae275ea2c9f/1526464175408-W92Q4MSAM40I8YF4HM64/tess-cover.jpg?format=1500w" alt="Book 3">
+            <h3>Book Title 3</h3>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugiat, vero! Aut nisi aperiam quaerat. Soluta optio voluptas perspiciatis a atque accusantium maxime doloribus ipsa quasi, vel vitae beatae asperiores consectetur dignissimos rerum illo. Rem ea dolor explicabo officia. Accusantium accusamus esse, delectus debitis iusto autem vitae! Distinctio quidem illum ipsa! </p>
+            <a href="#">Read Review</a>
+          </div>
+          <div class="card-item"
+            style="
+            z-index: 50;
+            transform: scale(1.05);
+            border: 2px solid red;"
+          >
+            <img src="https://www.theyoungfolks.com/wp-content/uploads/2017/08/six-of-crows-770x1156.jpg" alt="Book 4">
+            <h3>Book Title 4</h3>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugiat, vero! Aut nisi aperiam quaerat. Soluta optio voluptas perspiciatis a atque accusantium maxime doloribus ipsa quasi, vel vitae beatae asperiores consectetur dignissimos rerum illo. Rem ea dolor explicabo officia. Accusantium accusamus esse, delectus debitis iusto autem vitae! Distinctio quidem illum ipsa! </p>
+            <a href="#" style="text-decoration: underline;">Read Review</a>
+          </div>
+          <div class="card-item">
+            <img src="https://www.adobe.com/express/create/cover/media_181e3d2c78f153ae7bf0e19a2faeb9a76e234da30.jpeg?width=400&format=jpeg&optimize=medium" alt="Book 1">
+            <h3>Book Title 1</h3>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugiat, vero! Aut nisi aperiam quaerat. Soluta optio voluptas perspiciatis a atque accusantium maxime doloribus ipsa quasi, vel vitae beatae asperiores consectetur dignissimos rerum illo. Rem ea dolor explicabo officia. Accusantium accusamus esse, delectus debitis iusto autem vitae! Distinctio quidem illum ipsa! </p>
+            <a href="#">Read Review</a>
+          </div>
+          <div class="card-item">
+            <img src="https://edit.org/images/cat/book-covers-big-2019101610.jpg" alt="Book 2">
+            <h3>Book Title 2</h3>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugiat, vero! Aut nisi aperiam quaerat. Soluta optio voluptas perspiciatis a atque accusantium maxime doloribus ipsa quasi, vel vitae beatae asperiores consectetur dignissimos rerum illo. Rem ea dolor explicabo officia. Accusantium accusamus esse, delectus debitis iusto autem vitae! Distinctio quidem illum ipsa! </p>
+            <a href="#">Read Review</a>
+          </div>
+          <div class="card-item">
+            <img src="https://s26162.pcdn.co/wp-content/uploads/2020/01/Sin-Eater-by-Megan-Campisi.jpg" alt="Book 3">
+            <h3>Book Title 3</h3>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugiat, vero! Aut nisi aperiam quaerat. Soluta optio voluptas perspiciatis a atque accusantium maxime doloribus ipsa quasi, vel vitae beatae asperiores consectetur dignissimos rerum illo. Rem ea dolor explicabo officia. Accusantium accusamus esse, delectus debitis iusto autem vitae! Distinctio quidem illum ipsa! </p>
+            <a href="#">Read Review</a>
+          </div>
+          <div class="card-item">
+            <img src="https://d1csarkz8obe9u.cloudfront.net/posterpreviews/action-thriller-book-cover-design-template-3675ae3e3ac7ee095fc793ab61b812cc_screen.jpg?ts=1637008457" alt="Book 4">
+            <h3>Book Title 4</h3>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugiat, vero! Aut nisi aperiam quaerat. Soluta optio voluptas perspiciatis a atque accusantium maxime doloribus ipsa quasi, vel vitae beatae asperiores consectetur dignissimos rerum illo. Rem ea dolor explicabo officia. Accusantium accusamus esse, delectus debitis iusto autem vitae! Distinctio quidem illum ipsa! </p>
+            <a href="#">Read Review</a>
+          </div>
+        </div>
+      </section>
+
+      <section class="categorie-type">
+        <h2>New Releases</h2>
+        <div class="card">
+          <div class="card-item">
+            <img src="https://mir-s3-cdn-cf.behance.net/project_modules/hd/87d13a105505099.5f7afff336a58.jpg" alt="Book 1">
+            <h3>Book Title 1</h3>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugiat, vero! Aut nisi aperiam quaerat. Soluta optio voluptas perspiciatis a atque accusantium maxime doloribus ipsa quasi, vel vitae beatae asperiores consectetur dignissimos rerum illo. Rem ea dolor explicabo officia. Accusantium accusamus esse, delectus debitis iusto autem vitae! Distinctio quidem illum ipsa! </p>
+            <a href="#">Read Review</a>
+          </div>
+          <div class="card-item">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQppmin7i1gWb-DM5CdaInJ10P9PEHF-A1OCy-zubd0EapTFWCfbBMmabKQsPJSFFRH9O8&usqp=CAU" alt="Book 2">
+            <h3>Book Title 2</h3>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugiat, vero! Aut nisi aperiam quaerat. Soluta optio voluptas perspiciatis a atque accusantium maxime doloribus ipsa quasi, vel vitae beatae asperiores consectetur dignissimos rerum illo. Rem ea dolor explicabo officia. Accusantium accusamus esse, delectus debitis iusto autem vitae! Distinctio quidem illum ipsa! </p>
+            <a href="#">Read Review</a>
+          </div>
+          <div class="card-item">
+            <img src="https://www.shutterstock.com/blog/wp-content/uploads/sites/5/2017/10/the-50-coolest-book-covers-47.jpg" alt="Book 3">
+            <h3>Book Title 3</h3>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugiat, vero! Aut nisi aperiam quaerat. Soluta optio voluptas perspiciatis a atque accusantium maxime doloribus ipsa quasi, vel vitae beatae asperiores consectetur dignissimos rerum illo. Rem ea dolor explicabo officia. Accusantium accusamus esse, delectus debitis iusto autem vitae! Distinctio quidem illum ipsa! </p>
+            <a href="#">Read Review</a>
+          </div>
+          <div class="card-item">
+            <img src="https://s26162.pcdn.co/wp-content/uploads/2019/01/81SBy9jbbHL.jpg" alt="Book 4">
+            <h3>Book Title 4</h3>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugiat, vero! Aut nisi aperiam quaerat. Soluta optio voluptas perspiciatis a atque accusantium maxime doloribus ipsa quasi, vel vitae beatae asperiores consectetur dignissimos rerum illo. Rem ea dolor explicabo officia. Accusantium accusamus esse, delectus debitis iusto autem vitae! Distinctio quidem illum ipsa! </p>
+            <a href="#">Read Review</a>
+          </div>
+          <div class="card-item">
+            <img src="https://blog.hubspot.com/hs-fs/hubfs/%5BAgency_Post%5D/annihilation_cover.jpg?width=640&name=annihilation_cover.jpg" alt="Book 1">
+            <h3>Book Title 1</h3>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugiat, vero! Aut nisi aperiam quaerat. Soluta optio voluptas perspiciatis a atque accusantium maxime doloribus ipsa quasi, vel vitae beatae asperiores consectetur dignissimos rerum illo. Rem ea dolor explicabo officia. Accusantium accusamus esse, delectus debitis iusto autem vitae! Distinctio quidem illum ipsa! </p>
+            <a href="#">Read Review</a>
+          </div>
+          <div class="card-item">
+            <img src="https://static01.nyt.com/images/2022/12/11/books/review/08NotableBookCovers/08NotableBookCovers-articleLarge.jpg?quality=75&auto=webp&disable=upscale" alt="Book 2">
+            <h3>Book Title 2</h3>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugiat, vero! Aut nisi aperiam quaerat. Soluta optio voluptas perspiciatis a atque accusantium maxime doloribus ipsa quasi, vel vitae beatae asperiores consectetur dignissimos rerum illo. Rem ea dolor explicabo officia. Accusantium accusamus esse, delectus debitis iusto autem vitae! Distinctio quidem illum ipsa! </p>
+            <a href="#">Read Review</a>
+          </div>
+          <div class="card-item">
+            <img src="https://d4804za1f1gw.cloudfront.net/wp-content/uploads/sites/5/2021/11/97801437748531.jpg" alt="Book 3">
+            <h3>Book Title 3</h3>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugiat, vero! Aut nisi aperiam quaerat. Soluta optio voluptas perspiciatis a atque accusantium maxime doloribus ipsa quasi, vel vitae beatae asperiores consectetur dignissimos rerum illo. Rem ea dolor explicabo officia. Accusantium accusamus esse, delectus debitis iusto autem vitae! Distinctio quidem illum ipsa! </p>
+            <a href="#">Read Review</a>
+          </div>
+          <div class="card-item">
+            <img src="https://readriordan.com/wp-content/uploads/2022/02/Lightning-Thief-flat-cover.png" alt="Book 4">
+            <h3>Book Title 4</h3>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugiat, vero! Aut nisi aperiam quaerat. Soluta optio voluptas perspiciatis a atque accusantium maxime doloribus ipsa quasi, vel vitae beatae asperiores consectetur dignissimos rerum illo. Rem ea dolor explicabo officia. Accusantium accusamus esse, delectus debitis iusto autem vitae! Distinctio quidem illum ipsa! </p>
+            <a href="#">Read Review</a>
+          </div>
+        </div>
+      </section>
+
+      {% for category, book_list in books.items %}
+      <section class="categorie-type">
+        <h2>{{category}}</h2>
+        <div class="card">
+        {% for book in book_list %}
+          <div class="card-item">
+            <img src="{{book.image}}" alt="{{book.title}}">
+            <h3>{{book.title}}</h3>
+            <p>{{book.description}}</p>
+            <a href="/book_review/{{book.id}}">Read Review</a>
+          </div>
+        {% endfor %}
+        </div>
+      </section>
+      {% endfor %}
+
+      <!-- <section class="categorie-type">
+        <h2>Horror</h2>
+        <div class="card">
+          <div class="card-item">
+            <img src="https://kbimages1-a.akamaihd.net/6e9996bb-a77e-48df-a01c-431390970eb8/353/569/90/False/halloween-51.jpg" alt="Book 1">
+            <h3>Book Title 1</h3>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugiat, vero! Aut nisi aperiam quaerat. Soluta optio voluptas perspiciatis a atque accusantium maxime doloribus ipsa quasi, vel vitae beatae asperiores consectetur dignissimos rerum illo. Rem ea dolor explicabo officia. Accusantium accusamus esse, delectus debitis iusto autem vitae! Distinctio quidem illum ipsa! </p>
+            <a href="#">Read Review</a>
+          </div>
+          <div class="card-item">
+            <img src="https://bookoutlet.ca/_next/image?url=https%3A%2F%2Fimages.bookoutlet.com%2Fcovers%2Flarge%2Fisbn978035%2F9780358244431-l.jpg&w=640&q=75" alt="Book 2">
+            <h3>Book Title 2</h3>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugiat, vero! Aut nisi aperiam quaerat. Soluta optio voluptas perspiciatis a atque accusantium maxime doloribus ipsa quasi, vel vitae beatae asperiores consectetur dignissimos rerum illo. Rem ea dolor explicabo officia. Accusantium accusamus esse, delectus debitis iusto autem vitae! Distinctio quidem illum ipsa! </p>
+            <a href="#">Read Review</a>
+          </div>
+          <div class="card-item">
+            <img src="https://kbimages1-a.akamaihd.net/091fee99-65c8-40e0-8c6c-46a61fbc7741/353/569/90/False/the-haunting-of-cabin-green.jpg" alt="Book 3">
+            <h3>Book Title 3</h3>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugiat, vero! Aut nisi aperiam quaerat. Soluta optio voluptas perspiciatis a atque accusantium maxime doloribus ipsa quasi, vel vitae beatae asperiores consectetur dignissimos rerum illo. Rem ea dolor explicabo officia. Accusantium accusamus esse, delectus debitis iusto autem vitae! Distinctio quidem illum ipsa! </p>
+            <a href="#">Read Review</a>
+          </div>
+          <div class="card-item">
+            <img src="https://bookoutlet.ca/_next/image?url=https%3A%2F%2Fimages.bookoutlet.com%2Fcovers%2Flarge%2Fisbn978014%2F9780143134190-l.jpg&w=640&q=75" alt="Book 4">
+            <h3>Book Title 4</h3>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugiat, vero! Aut nisi aperiam quaerat. Soluta optio voluptas perspiciatis a atque accusantium maxime doloribus ipsa quasi, vel vitae beatae asperiores consectetur dignissimos rerum illo. Rem ea dolor explicabo officia. Accusantium accusamus esse, delectus debitis iusto autem vitae! Distinctio quidem illum ipsa! </p>
+            <a href="#">Read Review</a>
+          </div>
+          <div class="card-item">
+            <img src="https://m.media-amazon.com/images/I/410lHsidiVL._SY264_BO1,204,203,200_QL40_ML2_.jpg" alt="Book 1">
+            <h3>Book Title 1</h3>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugiat, vero! Aut nisi aperiam quaerat. Soluta optio voluptas perspiciatis a atque accusantium maxime doloribus ipsa quasi, vel vitae beatae asperiores consectetur dignissimos rerum illo. Rem ea dolor explicabo officia. Accusantium accusamus esse, delectus debitis iusto autem vitae! Distinctio quidem illum ipsa! </p>
+            <a href="#">Read Review</a>
+          </div>
+          <div class="card-item">
+            <img src="https://kbimages1-a.akamaihd.net/ed87690d-394d-40c4-b15f-ea176ebf91e7/353/569/90/False/the-fall-116.jpg" alt="Book 2">
+            <h3>Book Title 2</h3>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugiat, vero! Aut nisi aperiam quaerat. Soluta optio voluptas perspiciatis a atque accusantium maxime doloribus ipsa quasi, vel vitae beatae asperiores consectetur dignissimos rerum illo. Rem ea dolor explicabo officia. Accusantium accusamus esse, delectus debitis iusto autem vitae! Distinctio quidem illum ipsa! </p>
+            <a href="#">Read Review</a>
+          </div>
+          <div class="card-item">
+            <img src="https://kbimages1-a.akamaihd.net/cb0e8b16-f8f3-4ede-895e-f58a0cd401cb/353/569/90/False/sentinel-39.jpg" alt="Book 3">
+            <h3>Book Title 3</h3>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugiat, vero! Aut nisi aperiam quaerat. Soluta optio voluptas perspiciatis a atque accusantium maxime doloribus ipsa quasi, vel vitae beatae asperiores consectetur dignissimos rerum illo. Rem ea dolor explicabo officia. Accusantium accusamus esse, delectus debitis iusto autem vitae! Distinctio quidem illum ipsa! </p>
+            <a href="#">Read Review</a>
+          </div>
+          <div class="card-item">
+            <img src="https://images-platform.99static.com//UY2FsBCnEXBwVRr6L2L1u_a3uUU=/0x0:1500x1500/fit-in/500x500/99designs-contests-attachments/116/116279/attachment_116279808" alt="Book 4">
+            <h3>Book Title 4</h3>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugiat, vero! Aut nisi aperiam quaerat. Soluta optio voluptas perspiciatis a atque accusantium maxime doloribus ipsa quasi, vel vitae beatae asperiores consectetur dignissimos rerum illo. Rem ea dolor explicabo officia. Accusantium accusamus esse, delectus debitis iusto autem vitae! Distinctio quidem illum ipsa! </p>
+            <a href="#">Read Review</a>
+          </div>
+        </div>
+      </section>
+
+      <section class="categorie-type">
+        <h2>Romantic</h2>
+        <div class="card">
+          <div class="card-item">
+            <img src="https://marketplace.canva.com/EAFMdbMVH_Q/1/0/1003w/canva-black-and-white-modern-love-of-my-life-book-cover-IeT8vDunXhI.jpg" alt="Book 1">
+            <h3>Book Title 1</h3>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugiat, vero! Aut nisi aperiam quaerat. Soluta optio voluptas perspiciatis a atque accusantium maxime doloribus ipsa quasi, vel vitae beatae asperiores consectetur dignissimos rerum illo. Rem ea dolor explicabo officia. Accusantium accusamus esse, delectus debitis iusto autem vitae! Distinctio quidem illum ipsa! </p>
+            <a href="#">Read Review</a>
+          </div>
+          <div class="card-item">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRkLwAJaEceYdmZAvvwgdrs-BG1WFyJ5rgle1B-BNn7k6W-Cd47DJMtr_AqZqvSlrIsSSo&usqp=CAU" alt="Book 2">
+            <h3>Book Title 2</h3>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugiat, vero! Aut nisi aperiam quaerat. Soluta optio voluptas perspiciatis a atque accusantium maxime doloribus ipsa quasi, vel vitae beatae asperiores consectetur dignissimos rerum illo. Rem ea dolor explicabo officia. Accusantium accusamus esse, delectus debitis iusto autem vitae! Distinctio quidem illum ipsa! </p>
+            <a href="#">Read Review</a>
+          </div>
+          <div class="card-item">
+            <img src="https://bellamediamanagement.com/wp-content/uploads/2020/12/Premadecover121ebook-700x1050.jpg" alt="Book 3">
+            <h3>Book Title 3</h3>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugiat, vero! Aut nisi aperiam quaerat. Soluta optio voluptas perspiciatis a atque accusantium maxime doloribus ipsa quasi, vel vitae beatae asperiores consectetur dignissimos rerum illo. Rem ea dolor explicabo officia. Accusantium accusamus esse, delectus debitis iusto autem vitae! Distinctio quidem illum ipsa! </p>
+            <a href="#">Read Review</a>
+          </div>
+          <div class="card-item">
+            <img src="https://www.creativeparamita.com/wp-content/uploads/2023/01/The-journey-of-our-love.jpg" alt="Book 4">
+            <h3>Book Title 4</h3>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugiat, vero! Aut nisi aperiam quaerat. Soluta optio voluptas perspiciatis a atque accusantium maxime doloribus ipsa quasi, vel vitae beatae asperiores consectetur dignissimos rerum illo. Rem ea dolor explicabo officia. Accusantium accusamus esse, delectus debitis iusto autem vitae! Distinctio quidem illum ipsa! </p>
+            <a href="#">Read Review</a>
+          </div>
+          <div class="card-item">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRJZfzxmNFnJeoAPOgG9T-yMZ1o12_kELxxrA&usqp=CAU" alt="Book 1">
+            <h3>Book Title 1</h3>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugiat, vero! Aut nisi aperiam quaerat. Soluta optio voluptas perspiciatis a atque accusantium maxime doloribus ipsa quasi, vel vitae beatae asperiores consectetur dignissimos rerum illo. Rem ea dolor explicabo officia. Accusantium accusamus esse, delectus debitis iusto autem vitae! Distinctio quidem illum ipsa! </p>
+            <a href="#">Read Review</a>
+          </div>
+          <div class="card-item">
+            <img src="https://images.squarespace-cdn.com/content/v1/513a230ae4b0f3422dd7d5ad/1673460279066-4N65LLH1NLP91XSA74W0/premade-fantasy-romance-book-cover-designs.jpeg" alt="Book 2">
+            <h3>Book Title 2</h3>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugiat, vero! Aut nisi aperiam quaerat. Soluta optio voluptas perspiciatis a atque accusantium maxime doloribus ipsa quasi, vel vitae beatae asperiores consectetur dignissimos rerum illo. Rem ea dolor explicabo officia. Accusantium accusamus esse, delectus debitis iusto autem vitae! Distinctio quidem illum ipsa! </p>
+            <a href="#">Read Review</a>
+          </div>
+          <div class="card-item">
+            <img src="https://www.dochipo.com/wp-content/uploads/2022/08/Book-Cover-_-Romance-2.png" alt="Book 3">
+            <h3>Book Title 3</h3>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugiat, vero! Aut nisi aperiam quaerat. Soluta optio voluptas perspiciatis a atque accusantium maxime doloribus ipsa quasi, vel vitae beatae asperiores consectetur dignissimos rerum illo. Rem ea dolor explicabo officia. Accusantium accusamus esse, delectus debitis iusto autem vitae! Distinctio quidem illum ipsa! </p>
+            <a href="#">Read Review</a>
+          </div>
+          <div class="card-item">
+            <img src="https://www.creativindiecovers.com/wp-content/uploads/2012/07/smallerheadweb.jpg" alt="Book 4">
+            <h3>Book Title 4</h3>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugiat, vero! Aut nisi aperiam quaerat. Soluta optio voluptas perspiciatis a atque accusantium maxime doloribus ipsa quasi, vel vitae beatae asperiores consectetur dignissimos rerum illo. Rem ea dolor explicabo officia. Accusantium accusamus esse, delectus debitis iusto autem vitae! Distinctio quidem illum ipsa! </p>
+            <a href="#">Read Review</a>
+          </div>
+        </div>
+      </section>
+
+      <section class="categorie-type">
+        <h2>Comedy</h2>
+        <div class="card">
+          <div class="card-item">
+            <img src="https://images.squarespace-cdn.com/content/v1/5ba832b77d0c916575dabff9/1550279359494-8TVAJBWUMW8COIMRFPP5/PodcastBookCovers_5x7.jpg?format=750w" alt="Book 1">
+            <h3>Book Title 1</h3>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugiat, vero! Aut nisi aperiam quaerat. Soluta optio voluptas perspiciatis a atque accusantium maxime doloribus ipsa quasi, vel vitae beatae asperiores consectetur dignissimos rerum illo. Rem ea dolor explicabo officia. Accusantium accusamus esse, delectus debitis iusto autem vitae! Distinctio quidem illum ipsa! </p>
+            <a href="#">Read Review</a>
+          </div>
+          <div class="card-item">
+            <img src="https://m.media-amazon.com/images/I/51OoDlblLaL._SL500_.jpg" alt="Book 2">
+            <h3>Book Title 2</h3>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugiat, vero! Aut nisi aperiam quaerat. Soluta optio voluptas perspiciatis a atque accusantium maxime doloribus ipsa quasi, vel vitae beatae asperiores consectetur dignissimos rerum illo. Rem ea dolor explicabo officia. Accusantium accusamus esse, delectus debitis iusto autem vitae! Distinctio quidem illum ipsa! </p>
+            <a href="#">Read Review</a>
+          </div>
+          <div class="card-item">
+            <img src="https://coveryourdreams.files.wordpress.com/2013/07/ditched12-copy.jpg?w=800" alt="Book 3">
+            <h3>Book Title 3</h3>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugiat, vero! Aut nisi aperiam quaerat. Soluta optio voluptas perspiciatis a atque accusantium maxime doloribus ipsa quasi, vel vitae beatae asperiores consectetur dignissimos rerum illo. Rem ea dolor explicabo officia. Accusantium accusamus esse, delectus debitis iusto autem vitae! Distinctio quidem illum ipsa! </p>
+            <a href="#">Read Review</a>
+          </div>
+          <div class="card-item">
+            <img src="https://pyxis.nymag.com/v1/imgs/f47/0ed/a576d20200824d3bea1bb4fffb7b47a7e0-bossypants-tina-fey.rdeep-vertical.w245.jpg" alt="Book 4">
+            <h3>Book Title 4</h3>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugiat, vero! Aut nisi aperiam quaerat. Soluta optio voluptas perspiciatis a atque accusantium maxime doloribus ipsa quasi, vel vitae beatae asperiores consectetur dignissimos rerum illo. Rem ea dolor explicabo officia. Accusantium accusamus esse, delectus debitis iusto autem vitae! Distinctio quidem illum ipsa! </p>
+            <a href="#">Read Review</a>
+          </div>
+          <div class="card-item">
+            <img src="https://images-platform.99static.com//9Jg1TuTAqRafvpK50DkROuuUTs4=/542x312:1042x812/fit-in/500x500/99designs-contests-attachments/94/94208/attachment_94208763" alt="Book 1">
+            <h3>Book Title 1</h3>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugiat, vero! Aut nisi aperiam quaerat. Soluta optio voluptas perspiciatis a atque accusantium maxime doloribus ipsa quasi, vel vitae beatae asperiores consectetur dignissimos rerum illo. Rem ea dolor explicabo officia. Accusantium accusamus esse, delectus debitis iusto autem vitae! Distinctio quidem illum ipsa! </p>
+            <a href="#">Read Review</a>
+          </div>
+          <div class="card-item">
+            <img src="https://idobookcovers.com/wp-content/uploads/2016/10/badmothersdiary_ebook_cover_design.jpg" alt="Book 2">
+            <h3>Book Title 2</h3>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugiat, vero! Aut nisi aperiam quaerat. Soluta optio voluptas perspiciatis a atque accusantium maxime doloribus ipsa quasi, vel vitae beatae asperiores consectetur dignissimos rerum illo. Rem ea dolor explicabo officia. Accusantium accusamus esse, delectus debitis iusto autem vitae! Distinctio quidem illum ipsa! </p>
+            <a href="#">Read Review</a>
+          </div>
+          <div class="card-item">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSsUsRxc_HjkdU1fo4fRGCOAzMO6Hf8L5NIKQ&usqp=CAU" alt="Book 3">
+            <h3>Book Title 3</h3>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugiat, vero! Aut nisi aperiam quaerat. Soluta optio voluptas perspiciatis a atque accusantium maxime doloribus ipsa quasi, vel vitae beatae asperiores consectetur dignissimos rerum illo. Rem ea dolor explicabo officia. Accusantium accusamus esse, delectus debitis iusto autem vitae! Distinctio quidem illum ipsa! </p>
+            <a href="#">Read Review</a>
+          </div>
+          <div class="card-item">
+            <img src="https://images-platform.99static.com//y9_cmZBuiG5V1el8aZeMs8j0qRk=/5x0:2023x2018/fit-in/500x500/99designs-contests-attachments/125/125610/attachment_125610995" alt="Book 4">
+            <h3>Book Title 4</h3>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugiat, vero! Aut nisi aperiam quaerat. Soluta optio voluptas perspiciatis a atque accusantium maxime doloribus ipsa quasi, vel vitae beatae asperiores consectetur dignissimos rerum illo. Rem ea dolor explicabo officia. Accusantium accusamus esse, delectus debitis iusto autem vitae! Distinctio quidem illum ipsa! </p>
+            <a href="#">Read Review</a>
+          </div>
+        </div>
+      </section> -->
+
+    </div>
+
+    <footer class="footer">
+      <p>&copy; 2023 BookFlix. All rights reserved.</p>
+    </footer>
+
 </body>
-</html>
+</html>    
