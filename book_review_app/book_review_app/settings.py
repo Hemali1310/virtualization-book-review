@@ -28,7 +28,9 @@ SECRET_KEY = 'django-insecure-*^=i#+@ir0&rvxm2+4lix6c*$1f0kiy8it_43d%zofzt5_(f&!
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = [
+    "*"
+]
 
 
 # Application definition
@@ -84,8 +86,8 @@ DATABASES = {
         'ENGINE': 'django.db.backends.postgresql',
         'NAME': 'Book_Review_Application',
         'USER': 'postgres',
-        'PASSWORD': config('PASSWORD'),
-        'HOST': config('HOST'),
+        'PASSWORD': "BookReviewNSH",
+        'HOST': "database-bookreviewapp.cjvdkmn6idaz.us-east-1.rds.amazonaws.com",
         'PORT': '5432'
     }
 }

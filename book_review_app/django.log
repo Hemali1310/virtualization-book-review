@@ -4944,3 +4944,7 @@ Not Found: /brosw
 Not Found: /browse/brose_script.js
 "GET /browse/brose_script.js HTTP/1.1" 404 3148
 "GET /static/css/hero.jpg HTTP/1.1" 404 1795
+Not Found: /favicon.ico
+"GET /favicon.ico HTTP/1.1" 404 3115
+Not Found: /favicon.ico
+"GET /favicon.ico HTTP/1.1" 404 3115
