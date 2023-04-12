@@ -4948,3 +4948,134 @@ Not Found: /favicon.ico
 "GET /favicon.ico HTTP/1.1" 404 3115
 Not Found: /favicon.ico
 "GET /favicon.ico HTTP/1.1" 404 3115
+Not Found: /favicon.ico
+"GET /favicon.ico HTTP/1.1" 404 3115
+Internal Server Error: /login/
+Traceback (most recent call last):
+  File "/Users/hemali/lib/python3.9/site-packages/django/core/handlers/exception.py", line 56, in inner
+    response = get_response(request)
+  File "/Users/hemali/lib/python3.9/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Users/hemali/Documents/Humber/Semester1/Application Programming - 5003/Book_Review_App/book_review_app/application/views.py", line 42, in login_page
+    user = User.objects.filter(username=username, password=password).get()
+  File "/Users/hemali/lib/python3.9/site-packages/django/db/models/query.py", line 650, in get
+    raise self.model.DoesNotExist(
+application.models.User.DoesNotExist: User matching query does not exist.
+"POST /login/ HTTP/1.1" 500 66216
+Not Found: /browse/brose_script.js
+"GET /browse/brose_script.js HTTP/1.1" 404 3148
+"GET /static/css/hero.jpg HTTP/1.1" 404 1795
+Internal Server Error: /book_review/12/
+Traceback (most recent call last):
+  File "/Users/hemali/lib/python3.9/site-packages/django/core/handlers/exception.py", line 56, in inner
+    response = get_response(request)
+  File "/Users/hemali/lib/python3.9/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Users/hemali/Documents/Humber/Semester1/Application Programming - 5003/Book_Review_App/book_review_app/application/views.py", line 83, in book_review_page
+    publisher = Publisher.objects.get(pk = bookPub.books_book.book_id)
+  File "/Users/hemali/lib/python3.9/site-packages/django/db/models/manager.py", line 85, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "/Users/hemali/lib/python3.9/site-packages/django/db/models/query.py", line 650, in get
+    raise self.model.DoesNotExist(
+application.models.Publisher.DoesNotExist: Publisher matching query does not exist.
+"GET /book_review/12/ HTTP/1.1" 500 71173
+Internal Server Error: /book_review/18/
+Traceback (most recent call last):
+  File "/Users/hemali/lib/python3.9/site-packages/django/core/handlers/exception.py", line 56, in inner
+    response = get_response(request)
+  File "/Users/hemali/lib/python3.9/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Users/hemali/Documents/Humber/Semester1/Application Programming - 5003/Book_Review_App/book_review_app/application/views.py", line 83, in book_review_page
+    publisher = Publisher.objects.get(pk = bookPub.books_book.book_id)
+  File "/Users/hemali/lib/python3.9/site-packages/django/db/models/manager.py", line 85, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "/Users/hemali/lib/python3.9/site-packages/django/db/models/query.py", line 650, in get
+    raise self.model.DoesNotExist(
+application.models.Publisher.DoesNotExist: Publisher matching query does not exist.
+"GET /book_review/18/ HTTP/1.1" 500 71172
+Internal Server Error: /book_review/16/
+Traceback (most recent call last):
+  File "/Users/hemali/lib/python3.9/site-packages/django/core/handlers/exception.py", line 56, in inner
+    response = get_response(request)
+  File "/Users/hemali/lib/python3.9/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Users/hemali/Documents/Humber/Semester1/Application Programming - 5003/Book_Review_App/book_review_app/application/views.py", line 83, in book_review_page
+    publisher = Publisher.objects.get(pk = bookPub.books_book.book_id)
+  File "/Users/hemali/lib/python3.9/site-packages/django/db/models/manager.py", line 85, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "/Users/hemali/lib/python3.9/site-packages/django/db/models/query.py", line 650, in get
+    raise self.model.DoesNotExist(
+application.models.Publisher.DoesNotExist: Publisher matching query does not exist.
+"GET /book_review/16/ HTTP/1.1" 500 71176
+Not Found: /browse/brose_script.js
+"GET /browse/brose_script.js HTTP/1.1" 404 3148
+"GET /static/css/hero.jpg HTTP/1.1" 404 1795
+Internal Server Error: /book_review/23/
+Traceback (most recent call last):
+  File "/Users/hemali/lib/python3.9/site-packages/django/core/handlers/exception.py", line 56, in inner
+    response = get_response(request)
+  File "/Users/hemali/lib/python3.9/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Users/hemali/Documents/Humber/Semester1/Application Programming - 5003/Book_Review_App/book_review_app/application/views.py", line 83, in book_review_page
+    publisher = Publisher.objects.get(pk = bookPub.books_book.book_id)
+  File "/Users/hemali/lib/python3.9/site-packages/django/db/models/manager.py", line 85, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "/Users/hemali/lib/python3.9/site-packages/django/db/models/query.py", line 650, in get
+    raise self.model.DoesNotExist(
+application.models.Publisher.DoesNotExist: Publisher matching query does not exist.
+"GET /book_review/23/ HTTP/1.1" 500 71184
+Internal Server Error: /book_review/26/
+Traceback (most recent call last):
+  File "/Users/hemali/lib/python3.9/site-packages/django/core/handlers/exception.py", line 56, in inner
+    response = get_response(request)
+  File "/Users/hemali/lib/python3.9/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Users/hemali/Documents/Humber/Semester1/Application Programming - 5003/Book_Review_App/book_review_app/application/views.py", line 83, in book_review_page
+    publisher = Publisher.objects.get(pk = bookPub.books_book.book_id)
+  File "/Users/hemali/lib/python3.9/site-packages/django/db/models/manager.py", line 85, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "/Users/hemali/lib/python3.9/site-packages/django/db/models/query.py", line 650, in get
+    raise self.model.DoesNotExist(
+application.models.Publisher.DoesNotExist: Publisher matching query does not exist.
+"GET /book_review/26/ HTTP/1.1" 500 71178
+Not Found: /browse/brose_script.js
+"GET /browse/brose_script.js HTTP/1.1" 404 3148
+"GET /static/css/hero.jpg HTTP/1.1" 404 1795
+Not Found: /browse/brose_script.js
+"GET /browse/brose_script.js HTTP/1.1" 404 3148
+"GET /static/css/hero.jpg HTTP/1.1" 404 1795
+Not Found: /browse/brose_script.js
+"GET /browse/brose_script.js HTTP/1.1" 404 3148
+"GET /static/css/hero.jpg HTTP/1.1" 404 1795
+Not Found: /browse/brose_script.js
+"GET /browse/brose_script.js HTTP/1.1" 404 3148
+"GET /static/css/hero.jpg HTTP/1.1" 404 1795
+Not Found: /browse/brose_script.js
+"GET /browse/brose_script.js HTTP/1.1" 404 3148
+"GET /static/css/hero.jpg HTTP/1.1" 404 1795
+Not Found: /browse/brose_script.js
+"GET /browse/brose_script.js HTTP/1.1" 404 3148
+"GET /static/css/hero.jpg HTTP/1.1" 404 1795
+Not Found: /favicon.ico
+"GET /favicon.ico HTTP/1.1" 404 3115
+Internal Server Error: /login/
+Traceback (most recent call last):
+  File "/Users/hemali/lib/python3.9/site-packages/django/core/handlers/exception.py", line 56, in inner
+    response = get_response(request)
+  File "/Users/hemali/lib/python3.9/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Users/hemali/Documents/Humber/Semester1/Application Programming - 5003/Book_Review_App/book_review_app/application/views.py", line 42, in login_page
+    user = User.objects.filter(username=username, password=password).get()
+  File "/Users/hemali/lib/python3.9/site-packages/django/db/models/query.py", line 650, in get
+    raise self.model.DoesNotExist(
+application.models.User.DoesNotExist: User matching query does not exist.
+"POST /login/ HTTP/1.1" 500 66208
+Not Found: /browse/brose_script.js
+"GET /browse/brose_script.js HTTP/1.1" 404 3148
+"GET /static/css/hero.jpg HTTP/1.1" 404 1795
+Not Found: /browse/brose_script.js
+"GET /browse/brose_script.js HTTP/1.1" 404 3148
+"GET /static/css/hero.jpg HTTP/1.1" 404 1795
+Not Found: /browse/brose_script.js
+"GET /browse/brose_script.js HTTP/1.1" 404 3148
+"GET /static/css/hero.jpg HTTP/1.1" 404 1795
