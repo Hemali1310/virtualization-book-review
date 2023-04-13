@@ -4,7 +4,7 @@
   <head>
     <title>BookFlix</title>
     <link rel="stylesheet" href="{% static 'css/browse_style.css' %}"/>
-    <script type="text/javascript" src="brose_script.js"></script>
+    <script type="text/javascript" src="{% static 'js/brose_script.js' %}"></script>
   </head>
   <body>
 
@@ -14,7 +14,7 @@
       <nav class="nav">
         <a href="#">Home</a>
         <a href="/subscription/">Subscription</a>
-        <a href="/user_profile/">Profile</a>
+        <a href="/user_profile/{{user_id}}">Profile</a>
         <a href="#footer-desc">About Us</a>
       </nav>
     </header>
@@ -70,12 +70,7 @@
             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugiat, vero! Aut nisi aperiam quaerat. Soluta optio voluptas perspiciatis a atque accusantium maxime doloribus ipsa quasi, vel vitae beatae asperiores consectetur dignissimos rerum illo. Rem ea dolor explicabo officia. Accusantium accusamus esse, delectus debitis iusto autem vitae! Distinctio quidem illum ipsa! </p>
             <a href="#">Read Review</a>
           </div>
-          <div class="card-item"
-            style="
-            z-index: 50;
-            transform: scale(1.05);
-            border: 2px solid red;"
-          >
+          <div class="card-item">
             <img src="https://www.theyoungfolks.com/wp-content/uploads/2017/08/six-of-crows-770x1156.jpg" alt="Book 4">
             <h3>Book Title 4</h3>
             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugiat, vero! Aut nisi aperiam quaerat. Soluta optio voluptas perspiciatis a atque accusantium maxime doloribus ipsa quasi, vel vitae beatae asperiores consectetur dignissimos rerum illo. Rem ea dolor explicabo officia. Accusantium accusamus esse, delectus debitis iusto autem vitae! Distinctio quidem illum ipsa! </p>
@@ -171,7 +166,7 @@
             <img src="{{book.image}}" alt="{{book.title}}">
             <h3>{{book.title}}</h3>
             <p>{{book.description}}</p>
-            <a href="/book_review/{{book.id}}">Read Review</a>
+            <a href="/book_review/{{user_id}}/{{book.id}}">Read Review</a>
           </div>
         {% endfor %}
         </div>

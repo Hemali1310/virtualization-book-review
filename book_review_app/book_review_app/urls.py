@@ -15,17 +15,21 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path
-from application.views import home_page, login_page, signup_page, browse_page, book_review_page, user_profile, author_profile, subscription, payment_page
+from django.views.generic import TemplateView
+from application.views import home_page, login_page, signup_page, browse_page, book_review_page, user_profile, author_profile, subscription, payment_page, edit_profile, delete_review
 
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', home_page),
     path('login/', login_page),
     path('signup/', signup_page),
-    path('browse/', browse_page),
-    path('book_review/<int:id>/', book_review_page),
-    path('user_profile/', user_profile),
-    path('author_profile/', author_profile),
+    path('browse/<int:user_id>/', browse_page),
+    path('book_review/<int:user_id>/<int:id>/', book_review_page),
+    path('book_review/<int:user_id>/<int:id>/delete_review/<int:review_id>', delete_review),
+    path('user_profile/<int:user_id>/', user_profile),
+    path('author_profile/<int:author_id>/', author_profile),
     path('subscription/', subscription),
-    path('payment/', payment_page)
+    path('payment/', payment_page),
+    path('edit_profile/<int:user_id>/', edit_profile),
+    path('<path:unknown_path>', TemplateView.as_view(template_name='Error404.html')) 
 ]

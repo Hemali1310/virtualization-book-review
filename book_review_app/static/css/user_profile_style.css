@@ -118,12 +118,18 @@ nav a:hover {
     border-bottom: 2px solid white;
 }
 
-.visible{
-    display: block;
+.books-read{
+    display: none;
+    /* border: 2px solid red; */
 }
 
-.invisible{
+.authors-following{
     display: none;
+    /* border: 2px solid yellow; */
+}
+
+.visible{
+    display: block;
 }
 
 .container-tabs{
