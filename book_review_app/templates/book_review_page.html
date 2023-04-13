@@ -15,11 +15,10 @@
       </div>
       <nav>
         <ul>
-          <li><a href="/browse/">Browse</a></li>
+          <li><a href="/browse/{{user_id}}">Browse</a></li>
           <li><a href="/subscription/">Subscriptions</a></li>
-          <li><a href="#">About</a></li>
-          <li><a href="#">Contact</a></li>
-          <li><a href="/user_profile/"><i class="fa fa-user"></i></a></li>
+          <li><a href="#about-us">About</a></li>
+          <li><a href="/user_profile/{{user_id}}"><i class="fa fa-user"></i></a></li>
         </ul>
       </nav>
     </header>
@@ -105,14 +104,55 @@
                   </div>
             </div>
 
-            <div class="user-review">
-                <i>What do you think?</i>
-                <textarea placeholder=" Share your thougts....." style="margin-top:10px;"></textarea>
-                <button class="btn" style="margin-top:10px; width:10%; padding: 5px; font-weight: 800; border-radius: 5px ;">Submit</button>
-            </div>
+            <form action="/book_review/{{ user_id }}/{{ book.book_id }}/" method="POST">
+              {% csrf_token %}
+              <div class="user-review">
+                  <i>What do you think?</i>
+                  <textarea id="user_review" name="user_review" placeholder=" Share your thougts....." style="margin-top:10px;"></textarea>
+                  <button class="btn" style="margin-top:10px; width:10%; padding: 5px; font-weight: 800; border-radius: 5px ;">Submit</button>
+              </div>
+            </form>
 
             <div class="review-container">
                 <h3><i>Reviews:</i></h3>
+                {% for review in reviews %}
+                <div class="review-card">  
+                  <div class="card-item">
+                    <img src="{{ review.user_image }}" alt="{{ review.user_name }}">
+                    <div class="card-info">
+                      <h2>{{ review.user_name }}</h2>
+                      <div class="rate">
+                        <i>ratings:</i> &nbsp;
+                        <i class="fa fa-star-o" style="color: gold; font-size: 20px;"></i>
+                        <i class="fa fa-star-o" style="color: gold; font-size: 20px;"></i>
+                        <i class="fa fa-star-o" style="color: gold; font-size: 20px;"></i>
+                        <i class="fa fa-star-o" style="color: gold; font-size: 20px;"></i>
+                        <i class="fa fa-star-o" style="color: gold; font-size: 20px;"></i>
+                    </div>
+                    </div>
+                  </div>
+                  <div class="card-item-body">
+                    <p class="review">
+                      <i>
+                        {{ review.user_review }}
+                      </i>
+                    </p>
+                  </div>
+                  <div class="card-item-footer">
+                      <i class="fa fa-chevron-circle-up" style="font-size:medium; color: rgb(0, 255, 0);"> {{ review.upvote }}</i>
+                      <i class="fa fa-chevron-circle-down" style="font-size: medium; color: rgb(255, 0, 0);"> {{ review.downvote }}</i>
+                      <i class="fa fa-comments-o" style="font-size: large;">  {{ review.comments }}</i>
+                      {% if review.user_id == user_id %}
+                      <form action="delete_review/{{review.review_id}}" method="POST">
+                        {% csrf_token %}
+                        <button>
+                          <i class="fa fa-trash-o" style="font-size: large;"></i>
+                        </button>
+                      </form>
+                      {% endif %}
+                  </div>
+                </div>
+                {% endfor %}
                 <div class="review-card">  
                   <div class="card-item">
                     <img src="https://i.pinimg.com/originals/ae/ec/c2/aeecc22a67dac7987a80ac0724658493.jpg" alt="The Da Vinci Code">
@@ -139,6 +179,14 @@
                       <i class="fa fa-chevron-circle-up" style="font-size:medium; color: rgb(0, 255, 0);"> 34</i>
                       <i class="fa fa-chevron-circle-down" style="font-size: medium; color: rgb(255, 0, 0);"> 3</i>
                       <i class="fa fa-comments-o" style="font-size: large;">  73</i>
+                      {% if review.user_id == user_id %}
+                      <form action="delete_review/{{review.review_id}}" method="POST">
+                        {% csrf_token %}
+                        <button>
+                          <i class="fa fa-trash-o" style="font-size: large;"></i>
+                        </button>
+                      </form>
+                      {% endif %}
                   </div>
                 </div>
         
@@ -168,6 +216,14 @@
                       <i class="fa fa-chevron-circle-up" style="font-size:medium; color: rgb(0, 255, 0);"> 34</i>
                       <i class="fa fa-chevron-circle-down" style="font-size: medium; color: rgb(255, 0, 0);"> 3</i>
                       <i class="fa fa-comments-o" style="font-size: large;">  73</i>
+                      {% if review.user_id == user_id %}
+                      <form action="delete_review/{{review.review_id}}" method="POST">
+                        {% csrf_token %}
+                        <button>
+                          <i class="fa fa-trash-o" style="font-size: large;"></i>
+                        </button>
+                      </form>
+                      {% endif %}
                   </div>
                 </div>
         
@@ -197,6 +253,14 @@
                       <i class="fa fa-chevron-circle-up" style="font-size:medium; color: rgb(0, 255, 0);"> 34</i>
                       <i class="fa fa-chevron-circle-down" style="font-size: medium; color: rgb(255, 0, 0);"> 3</i>
                       <i class="fa fa-comments-o" style="font-size: large;">  73</i>
+                      {% if review.user_id == user_id %}
+                      <form action="delete_review/{{review.review_id}}" method="POST">
+                        {% csrf_token %}
+                        <button>
+                          <i class="fa fa-trash-o" style="font-size: large;"></i>
+                        </button>
+                      </form>
+                      {% endif %}
                   </div>
                 </div>
         
@@ -226,6 +290,14 @@
                       <i class="fa fa-chevron-circle-up" style="font-size:medium; color: rgb(0, 255, 0);"> 34</i>
                       <i class="fa fa-chevron-circle-down" style="font-size: medium; color: rgb(255, 0, 0);"> 3</i>
                       <i class="fa fa-comments-o" style="font-size: large;">  73</i>
+                      {% if review.user_id == user_id %}
+                      <form action="delete_review/{{review.review_id}}" method="POST">
+                        {% csrf_token %}
+                        <button>
+                          <i class="fa fa-trash-o" style="font-size: large;"></i>
+                        </button>
+                      </form>
+                      {% endif %}
                   </div>
                 </div>
         
@@ -255,6 +327,14 @@
                       <i class="fa fa-chevron-circle-up" style="font-size:medium; color: rgb(0, 255, 0);"> 34</i>
                       <i class="fa fa-chevron-circle-down" style="font-size: medium; color: rgb(255, 0, 0);"> 3</i>
                       <i class="fa fa-comments-o" style="font-size: large;">  73</i>
+                      {% if review.user_id == user_id %}
+                      <form action="delete_review/{{review.review_id}}" method="POST">
+                        {% csrf_token %}
+                        <button>
+                          <i class="fa fa-trash-o" style="font-size: large;"></i>
+                        </button>
+                      </form>
+                      {% endif %}
                   </div>
                 </div>
         
@@ -284,6 +364,14 @@
                       <i class="fa fa-chevron-circle-up" style="font-size:medium; color: rgb(0, 255, 0);"> 34</i>
                       <i class="fa fa-chevron-circle-down" style="font-size: medium; color: rgb(255, 0, 0);"> 3</i>
                       <i class="fa fa-comments-o" style="font-size: large;">  73</i>
+                      {% if review.user_id == user_id %}
+                      <form action="delete_review/{{review.review_id}}" method="POST">
+                        {% csrf_token %}
+                        <button>
+                          <i class="fa fa-trash-o" style="font-size: large;"></i>
+                        </button>
+                      </form>
+                      {% endif %}
                   </div>
                 </div>
         
@@ -313,6 +401,14 @@
                       <i class="fa fa-chevron-circle-up" style="font-size:medium; color: rgb(0, 255, 0);"> 34</i>
                       <i class="fa fa-chevron-circle-down" style="font-size: medium; color: rgb(255, 0, 0);"> 3</i>
                       <i class="fa fa-comments-o" style="font-size: large;">  73</i>
+                      {% if review.user_id == user_id %}
+                      <form action="delete_review/{{review.review_id}}" method="POST">
+                        {% csrf_token %}
+                        <button>
+                          <i class="fa fa-trash-o" style="font-size: large;"></i>
+                        </button>
+                      </form>
+                      {% endif %}
                   </div>
                 </div>
         
@@ -342,6 +438,14 @@
                       <i class="fa fa-chevron-circle-up" style="font-size:medium; color: rgb(0, 255, 0);"> 34</i>
                       <i class="fa fa-chevron-circle-down" style="font-size: medium; color: rgb(255, 0, 0);"> 3</i>
                       <i class="fa fa-comments-o" style="font-size: large;">  73</i>
+                      {% if review.user_id == user_id %}
+                      <form action="delete_review/{{review.review_id}}" method="POST">
+                        {% csrf_token %}
+                        <button>
+                          <i class="fa fa-trash-o" style="font-size: large;"></i>
+                        </button>
+                      </form>
+                      {% endif %}
                   </div>
                 </div>
         
@@ -371,6 +475,14 @@
                       <i class="fa fa-chevron-circle-up" style="font-size:medium; color: rgb(0, 255, 0);"> 34</i>
                       <i class="fa fa-chevron-circle-down" style="font-size: medium; color: rgb(255, 0, 0);"> 3</i>
                       <i class="fa fa-comments-o" style="font-size: large;">  73</i>
+                      {% if review.user_id == user_id %}
+                      <form action="delete_review/{{review.review_id}}" method="POST">
+                        {% csrf_token %}
+                        <button>
+                          <i class="fa fa-trash-o" style="font-size: large;"></i>
+                        </button>
+                      </form>
+                      {% endif %}
                   </div>
                 </div>
         
@@ -400,6 +512,14 @@
                       <i class="fa fa-chevron-circle-up" style="font-size:medium; color: rgb(0, 255, 0);"> 34</i>
                       <i class="fa fa-chevron-circle-down" style="font-size: medium; color: rgb(255, 0, 0);"> 3</i>
                       <i class="fa fa-comments-o" style="font-size: large;">  73</i>
+                      {% if review.user_id == user_id %}
+                      <form action="delete_review/{{review.review_id}}" method="POST">
+                        {% csrf_token %}
+                        <button>
+                          <i class="fa fa-trash-o" style="font-size: large;"></i>
+                        </button>
+                      </form>
+                      {% endif %}
                   </div>
                 </div>
         
@@ -411,7 +531,7 @@
     <!-- Footer -->
     <footer class="footer">
       <div class="container">
-        <p>&copy; 2023 BookFlix. All Rights Reserved.</p>
+        <p id="about-us">&copy; 2023 BookFlix. All Rights Reserved.</p>
       </div>
     </footer>
   </body>

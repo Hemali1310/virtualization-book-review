@@ -144,14 +144,14 @@ body {
     margin: 15px 30px 15px 10px;
     width: auto;
     height: auto;
-    /* border: 2px solid green; */
+    border: 2px solid green;
     transition: transform 0.2s ease;
   }
 
   .card-item:hover {
     z-index: 50;
-    transform: scale(1.06);
-    border: 2px solid red;
+    transform: scale(0.5);
+    border: 2px solid yellow;
   }
 
   .card-item img {

@@ -28,6 +28,13 @@
             <div class="formm">
                 <form action="" method="POST">
                     <h1>Log In</h1>
+                    {% if messages %}
+                        <div style="width: 100%; border: 2px solid red; padding: 10px; margin-bottom: 10px; border-radius: 10px;">
+                            {% for message in messages %}
+                            <b style="color: red">{{ message }}</b>
+                            {% endfor %}
+                        </div>
+                    {% endif %}
                     <div class="info">
                         <input class="email" type="text" placeholder="Enter your username" name="username" id="username"> <br>
                         <input class="email" type="password" placeholder="Enter password" name="password" id="password">

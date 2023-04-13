@@ -5079,3 +5079,594 @@ Not Found: /browse/brose_script.js
 Not Found: /browse/brose_script.js
 "GET /browse/brose_script.js HTTP/1.1" 404 3148
 "GET /static/css/hero.jpg HTTP/1.1" 404 1795
+Not Found: /favicon.ico
+"GET /favicon.ico HTTP/1.1" 404 3115
+Internal Server Error: /login/
+Traceback (most recent call last):
+  File "C:\Users\Nisarg Mahyavanshi\AppData\Local\Programs\Python\Python39\lib\site-packages\django\core\handlers\exception.py", line 56, in inner
+    response = get_response(request)
+  File "C:\Users\Nisarg Mahyavanshi\AppData\Local\Programs\Python\Python39\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "D:\College_Assignments\SEM1\AP Lec labs\Book Review Project\book_review_app\application\views.py", line 42, in login_page
+    user = User.objects.filter(username=username, password=password).get()
+  File "C:\Users\Nisarg Mahyavanshi\AppData\Local\Programs\Python\Python39\lib\site-packages\django\db\models\query.py", line 650, in get
+    raise self.model.DoesNotExist(
+application.models.User.DoesNotExist: User matching query does not exist.
+"POST /login/ HTTP/1.1" 500 79178
+Not Found: /browse/brose_script.js
+"GET /browse/brose_script.js HTTP/1.1" 404 3148
+"GET /static/css/hero.jpg HTTP/1.1" 404 1795
+Not Found: /browse/brose_script.js
+"GET /browse/brose_script.js HTTP/1.1" 404 3148
+"GET /static/css/hero.jpg HTTP/1.1" 404 1795
+Not Found: /browse/brose_script.js
+"GET /browse/brose_script.js HTTP/1.1" 404 3148
+"GET /static/css/hero.jpg HTTP/1.1" 404 1795
+Not Found: /browse/brose_script.js
+"GET /browse/brose_script.js HTTP/1.1" 404 3148
+"GET /static/css/hero.jpg HTTP/1.1" 404 1795
+Not Found: /browse/brose_script.js
+"GET /browse/brose_script.js HTTP/1.1" 404 3148
+"GET /static/css/hero.jpg HTTP/1.1" 404 1795
+Internal Server Error: /login/
+Traceback (most recent call last):
+  File "C:\Users\Nisarg Mahyavanshi\AppData\Local\Programs\Python\Python39\lib\site-packages\django\core\handlers\exception.py", line 56, in inner
+    response = get_response(request)
+  File "C:\Users\Nisarg Mahyavanshi\AppData\Local\Programs\Python\Python39\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "D:\College_Assignments\SEM1\AP Lec labs\Book Review Project\book_review_app\application\views.py", line 45, in login_page
+    return redirect('/browse/'+user.user_id)
+AttributeError: 'QuerySet' object has no attribute 'user_id'
+"POST /login/ HTTP/1.1" 500 75186
+Internal Server Error: /login/
+Traceback (most recent call last):
+  File "C:\Users\Nisarg Mahyavanshi\AppData\Local\Programs\Python\Python39\lib\site-packages\django\core\handlers\exception.py", line 56, in inner
+    response = get_response(request)
+  File "C:\Users\Nisarg Mahyavanshi\AppData\Local\Programs\Python\Python39\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "D:\College_Assignments\SEM1\AP Lec labs\Book Review Project\book_review_app\application\views.py", line 46, in login_page
+    return redirect('/browse/'+user.user_id)
+TypeError: can only concatenate str (not "int") to str
+"POST /login/ HTTP/1.1" 500 75080
+Not Found: /browse/4
+"GET /browse/4 HTTP/1.1" 404 3106
+Internal Server Error: /browse/4/
+Traceback (most recent call last):
+  File "C:\Users\Nisarg Mahyavanshi\AppData\Local\Programs\Python\Python39\lib\site-packages\django\core\handlers\exception.py", line 56, in inner
+    response = get_response(request)
+  File "C:\Users\Nisarg Mahyavanshi\AppData\Local\Programs\Python\Python39\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+TypeError: browse_page() got an unexpected keyword argument 'id'
+"GET /browse/4/ HTTP/1.1" 500 70227
+Internal Server Error: /browse/4/
+Traceback (most recent call last):
+  File "C:\Users\Nisarg Mahyavanshi\AppData\Local\Programs\Python\Python39\lib\site-packages\django\core\handlers\exception.py", line 56, in inner
+    response = get_response(request)
+  File "C:\Users\Nisarg Mahyavanshi\AppData\Local\Programs\Python\Python39\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+TypeError: browse_page() got an unexpected keyword argument 'user_id'
+"GET /browse/4/ HTTP/1.1" 500 70252
+Not Found: /browse/
+"GET /browse/ HTTP/1.1" 404 3165
+Internal Server Error: /browse/4/
+Traceback (most recent call last):
+  File "C:\Users\Nisarg Mahyavanshi\AppData\Local\Programs\Python\Python39\lib\site-packages\django\core\handlers\exception.py", line 56, in inner
+    response = get_response(request)
+  File "C:\Users\Nisarg Mahyavanshi\AppData\Local\Programs\Python\Python39\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+TypeError: browse_page() got an unexpected keyword argument 'user_id'
+"GET /browse/4/ HTTP/1.1" 500 70252
+Internal Server Error: /browse/4/
+Traceback (most recent call last):
+  File "C:\Users\Nisarg Mahyavanshi\AppData\Local\Programs\Python\Python39\lib\site-packages\django\core\handlers\exception.py", line 56, in inner
+    response = get_response(request)
+  File "C:\Users\Nisarg Mahyavanshi\AppData\Local\Programs\Python\Python39\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+TypeError: browse_page() got an unexpected keyword argument 'user_id'
+"GET /browse/4/ HTTP/1.1" 500 70252
+Internal Server Error: /browse/4/
+Traceback (most recent call last):
+  File "C:\Users\Nisarg Mahyavanshi\AppData\Local\Programs\Python\Python39\lib\site-packages\django\core\handlers\exception.py", line 56, in inner
+    response = get_response(request)
+  File "C:\Users\Nisarg Mahyavanshi\AppData\Local\Programs\Python\Python39\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+TypeError: browse_page() got an unexpected keyword argument 'user_id'
+"GET /browse/4/ HTTP/1.1" 500 70252
+Internal Server Error: /browse/4/
+Traceback (most recent call last):
+  File "C:\Users\Nisarg Mahyavanshi\AppData\Local\Programs\Python\Python39\lib\site-packages\django\core\handlers\exception.py", line 56, in inner
+    response = get_response(request)
+  File "C:\Users\Nisarg Mahyavanshi\AppData\Local\Programs\Python\Python39\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+TypeError: browse_page() got an unexpected keyword argument 'user_id'
+"GET /browse/4/ HTTP/1.1" 500 70264
+Internal Server Error: /browse/4/
+Traceback (most recent call last):
+  File "C:\Users\Nisarg Mahyavanshi\AppData\Local\Programs\Python\Python39\lib\site-packages\django\core\handlers\exception.py", line 56, in inner
+    response = get_response(request)
+  File "C:\Users\Nisarg Mahyavanshi\AppData\Local\Programs\Python\Python39\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+TypeError: browse_page() got an unexpected keyword argument 'user_id'
+"GET /browse/4/ HTTP/1.1" 500 70264
+Internal Server Error: /browse/4/
+Traceback (most recent call last):
+  File "C:\Users\Nisarg Mahyavanshi\AppData\Local\Programs\Python\Python39\lib\site-packages\django\core\handlers\exception.py", line 56, in inner
+    response = get_response(request)
+  File "C:\Users\Nisarg Mahyavanshi\AppData\Local\Programs\Python\Python39\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+TypeError: browse_page() got an unexpected keyword argument 'user_id'
+"GET /browse/4/ HTTP/1.1" 500 70264
+Internal Server Error: /browse/4/
+Traceback (most recent call last):
+  File "C:\Users\Nisarg Mahyavanshi\AppData\Local\Programs\Python\Python39\lib\site-packages\django\core\handlers\exception.py", line 56, in inner
+    response = get_response(request)
+  File "C:\Users\Nisarg Mahyavanshi\AppData\Local\Programs\Python\Python39\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+TypeError: browse_page() got an unexpected keyword argument 'user_id'
+"GET /browse/4/ HTTP/1.1" 500 70264
+Internal Server Error: /login/
+Traceback (most recent call last):
+  File "C:\Users\Nisarg Mahyavanshi\AppData\Local\Programs\Python\Python39\lib\site-packages\django\core\handlers\exception.py", line 56, in inner
+    response = get_response(request)
+  File "C:\Users\Nisarg Mahyavanshi\AppData\Local\Programs\Python\Python39\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "D:\College_Assignments\SEM1\AP Lec labs\Book Review Project\book_review_app\application\views.py", line 47, in login_page
+    return redirect(reverse("browse/", args=str(user.user_id)))
+  File "C:\Users\Nisarg Mahyavanshi\AppData\Local\Programs\Python\Python39\lib\site-packages\django\urls\base.py", line 88, in reverse
+    return resolver._reverse_with_prefix(view, prefix, *args, **kwargs)
+  File "C:\Users\Nisarg Mahyavanshi\AppData\Local\Programs\Python\Python39\lib\site-packages\django\urls\resolvers.py", line 828, in _reverse_with_prefix
+    raise NoReverseMatch(msg)
+django.urls.exceptions.NoReverseMatch: Reverse for 'browse/' not found. 'browse/' is not a valid view function or pattern name.
+"POST /login/ HTTP/1.1" 500 85432
+Internal Server Error: /login/
+Traceback (most recent call last):
+  File "C:\Users\Nisarg Mahyavanshi\AppData\Local\Programs\Python\Python39\lib\site-packages\django\core\handlers\exception.py", line 56, in inner
+    response = get_response(request)
+  File "C:\Users\Nisarg Mahyavanshi\AppData\Local\Programs\Python\Python39\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "D:\College_Assignments\SEM1\AP Lec labs\Book Review Project\book_review_app\application\views.py", line 47, in login_page
+    return redirect(reverse("browse/"+str(user.user_id)+"/"))
+  File "C:\Users\Nisarg Mahyavanshi\AppData\Local\Programs\Python\Python39\lib\site-packages\django\urls\base.py", line 88, in reverse
+    return resolver._reverse_with_prefix(view, prefix, *args, **kwargs)
+  File "C:\Users\Nisarg Mahyavanshi\AppData\Local\Programs\Python\Python39\lib\site-packages\django\urls\resolvers.py", line 828, in _reverse_with_prefix
+    raise NoReverseMatch(msg)
+django.urls.exceptions.NoReverseMatch: Reverse for 'browse/4/' not found. 'browse/4/' is not a valid view function or pattern name.
+"POST /login/ HTTP/1.1" 500 85451
+Internal Server Error: /login/
+Traceback (most recent call last):
+  File "C:\Users\Nisarg Mahyavanshi\AppData\Local\Programs\Python\Python39\lib\site-packages\django\core\handlers\exception.py", line 56, in inner
+    response = get_response(request)
+  File "C:\Users\Nisarg Mahyavanshi\AppData\Local\Programs\Python\Python39\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "D:\College_Assignments\SEM1\AP Lec labs\Book Review Project\book_review_app\application\views.py", line 47, in login_page
+    return redirect(reverse("/browse/"+str(user.user_id)+"/"))
+  File "C:\Users\Nisarg Mahyavanshi\AppData\Local\Programs\Python\Python39\lib\site-packages\django\urls\base.py", line 88, in reverse
+    return resolver._reverse_with_prefix(view, prefix, *args, **kwargs)
+  File "C:\Users\Nisarg Mahyavanshi\AppData\Local\Programs\Python\Python39\lib\site-packages\django\urls\resolvers.py", line 828, in _reverse_with_prefix
+    raise NoReverseMatch(msg)
+django.urls.exceptions.NoReverseMatch: Reverse for '/browse/4/' not found. '/browse/4/' is not a valid view function or pattern name.
+"POST /login/ HTTP/1.1" 500 85467
+Internal Server Error: /browse/4/
+Traceback (most recent call last):
+  File "C:\Users\Nisarg Mahyavanshi\AppData\Local\Programs\Python\Python39\lib\site-packages\django\core\handlers\exception.py", line 56, in inner
+    response = get_response(request)
+  File "C:\Users\Nisarg Mahyavanshi\AppData\Local\Programs\Python\Python39\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+TypeError: browse_page() got an unexpected keyword argument 'user_id'
+"GET /browse/4/ HTTP/1.1" 500 70264
+Not Found: /browse/4/brose_script.js
+"GET /browse/4/brose_script.js HTTP/1.1" 404 3216
+"GET /static/css/hero.jpg HTTP/1.1" 404 1795
+Internal Server Error: /browse/4/
+Traceback (most recent call last):
+  File "C:\Users\Nisarg Mahyavanshi\AppData\Local\Programs\Python\Python39\lib\site-packages\django\core\handlers\exception.py", line 56, in inner
+    response = get_response(request)
+  File "C:\Users\Nisarg Mahyavanshi\AppData\Local\Programs\Python\Python39\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "D:\College_Assignments\SEM1\AP Lec labs\Book Review Project\book_review_app\application\views.py", line 66, in browse_page
+    return render(request, "browse.html", {"books": book_list}, user_id=user_id)
+TypeError: render() got an unexpected keyword argument 'user_id'
+"GET /browse/4/ HTTP/1.1" 500 79858
+Not Found: /browse/4/brose_script.js
+"GET /browse/4/brose_script.js HTTP/1.1" 404 3216
+"GET /static/css/hero.jpg HTTP/1.1" 404 1795
+Not Found: /browse/4/brose_script.js
+"GET /browse/4/brose_script.js HTTP/1.1" 404 3216
+Internal Server Error: /user_profile/4/
+Traceback (most recent call last):
+  File "C:\Users\Nisarg Mahyavanshi\AppData\Local\Programs\Python\Python39\lib\site-packages\django\core\handlers\exception.py", line 56, in inner
+    response = get_response(request)
+  File "C:\Users\Nisarg Mahyavanshi\AppData\Local\Programs\Python\Python39\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+TypeError: user_profile() got an unexpected keyword argument 'user_id'
+"GET /user_profile/4/ HTTP/1.1" 500 70179
+Not Found: /browse/
+"GET /browse/ HTTP/1.1" 404 3165
+Not Found: /browse/
+"GET /browse/ HTTP/1.1" 404 3165
+Not Found: /browse/
+"GET /browse/ HTTP/1.1" 404 3165
+Not Found: /browse/4/brose_script.js
+"GET /browse/4/brose_script.js HTTP/1.1" 404 3216
+"GET /static/css/hero.jpg HTTP/1.1" 404 1795
+Not Found: /browse/4/brose_script.js
+"GET /browse/4/brose_script.js HTTP/1.1" 404 3216
+"GET /static/css/hero.jpg HTTP/1.1" 404 1795
+Not Found: /browse/4/brose_script.js
+"GET /browse/4/brose_script.js HTTP/1.1" 404 3216
+"GET /static/css/hero.jpg HTTP/1.1" 404 1795
+Not Found: /browse/4/brose_script.js
+"GET /browse/4/brose_script.js HTTP/1.1" 404 3216
+"GET /static/css/hero.jpg HTTP/1.1" 404 1795
+Not Found: /browse/4/brose_script.js
+"GET /browse/4/brose_script.js HTTP/1.1" 404 3216
+Not Found: /browse/4/brose_script.js
+"GET /browse/4/brose_script.js HTTP/1.1" 404 3216
+Not Found: /browse/4/brose_script.js
+"GET /browse/4/brose_script.js HTTP/1.1" 404 3216
+Not Found: /browse/4/brose_script.js
+"GET /browse/4/brose_script.js HTTP/1.1" 404 3216
+Not Found: /browse/4/brose_script.js
+"GET /browse/4/brose_script.js HTTP/1.1" 404 3216
+Not Found: /browse/4/brose_script.js
+"GET /browse/4/brose_script.js HTTP/1.1" 404 3216
+Not Found: /browse/4/brose_script.js
+"GET /browse/4/brose_script.js HTTP/1.1" 404 3216
+Not Found: /browse/4/brose_script.js
+"GET /browse/4/brose_script.js HTTP/1.1" 404 3216
+Not Found: /browse/4/brose_script.js
+"GET /browse/4/brose_script.js HTTP/1.1" 404 3216
+Not Found: /browse/4/brose_script.js
+"GET /browse/4/brose_script.js HTTP/1.1" 404 3216
+Internal Server Error: /browse/4/
+Traceback (most recent call last):
+  File "C:\Users\Nisarg Mahyavanshi\AppData\Local\Programs\Python\Python39\lib\site-packages\django\core\handlers\exception.py", line 56, in inner
+    response = get_response(request)
+  File "C:\Users\Nisarg Mahyavanshi\AppData\Local\Programs\Python\Python39\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "D:\College_Assignments\SEM1\AP Lec labs\Book Review Project\book_review_app\application\views.py", line 66, in browse_page
+    return render(request, "browse.html", {"books": book_list, "user_id": user_id})
+  File "C:\Users\Nisarg Mahyavanshi\AppData\Local\Programs\Python\Python39\lib\site-packages\django\shortcuts.py", line 24, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+  File "C:\Users\Nisarg Mahyavanshi\AppData\Local\Programs\Python\Python39\lib\site-packages\django\template\loader.py", line 61, in render_to_string
+    template = get_template(template_name, using=using)
+  File "C:\Users\Nisarg Mahyavanshi\AppData\Local\Programs\Python\Python39\lib\site-packages\django\template\loader.py", line 15, in get_template
+    return engine.get_template(template_name)
+  File "C:\Users\Nisarg Mahyavanshi\AppData\Local\Programs\Python\Python39\lib\site-packages\django\template\backends\django.py", line 33, in get_template
+    return Template(self.engine.get_template(template_name), self)
+  File "C:\Users\Nisarg Mahyavanshi\AppData\Local\Programs\Python\Python39\lib\site-packages\django\template\engine.py", line 175, in get_template
+    template, origin = self.find_template(template_name)
+  File "C:\Users\Nisarg Mahyavanshi\AppData\Local\Programs\Python\Python39\lib\site-packages\django\template\engine.py", line 157, in find_template
+    template = loader.get_template(name, skip=skip)
+  File "C:\Users\Nisarg Mahyavanshi\AppData\Local\Programs\Python\Python39\lib\site-packages\django\template\loaders\cached.py", line 57, in get_template
+    template = super().get_template(template_name, skip)
+  File "C:\Users\Nisarg Mahyavanshi\AppData\Local\Programs\Python\Python39\lib\site-packages\django\template\loaders\base.py", line 28, in get_template
+    return Template(
+  File "C:\Users\Nisarg Mahyavanshi\AppData\Local\Programs\Python\Python39\lib\site-packages\django\template\base.py", line 154, in __init__
+    self.nodelist = self.compile_nodelist()
+  File "C:\Users\Nisarg Mahyavanshi\AppData\Local\Programs\Python\Python39\lib\site-packages\django\template\base.py", line 200, in compile_nodelist
+    return parser.parse()
+  File "C:\Users\Nisarg Mahyavanshi\AppData\Local\Programs\Python\Python39\lib\site-packages\django\template\base.py", line 484, in parse
+    raise self.error(token, e)
+  File "C:\Users\Nisarg Mahyavanshi\AppData\Local\Programs\Python\Python39\lib\site-packages\django\template\base.py", line 482, in parse
+    filter_expression = self.compile_filter(token.contents)
+  File "C:\Users\Nisarg Mahyavanshi\AppData\Local\Programs\Python\Python39\lib\site-packages\django\template\base.py", line 600, in compile_filter
+    return FilterExpression(token, self)
+  File "C:\Users\Nisarg Mahyavanshi\AppData\Local\Programs\Python\Python39\lib\site-packages\django\template\base.py", line 703, in __init__
+    raise TemplateSyntaxError(
+django.template.exceptions.TemplateSyntaxError: Could not parse the remainder: '% static 'js/brose_script.js' %' from '% static 'js/brose_script.js' %'
+"GET /browse/4/ HTTP/1.1" 500 181058
+Not Found: /browse/
+"GET /browse/ HTTP/1.1" 404 3165
+Not Found: /user_profile/
+"GET /user_profile/ HTTP/1.1" 404 3183
+Not Found: /book_review/6
+"POST /book_review/6 HTTP/1.1" 404 3204
+Not Found: /book_review//6
+"POST /book_review//6 HTTP/1.1" 404 3207
+Internal Server Error: /book_review/4/6
+Traceback (most recent call last):
+  File "C:\Users\Nisarg Mahyavanshi\AppData\Local\Programs\Python\Python39\lib\site-packages\django\core\handlers\exception.py", line 56, in inner
+    response = get_response(request)
+  File "C:\Users\Nisarg Mahyavanshi\AppData\Local\Programs\Python\Python39\lib\site-packages\django\utils\deprecation.py", line 135, in __call__
+    response = self.process_request(request)
+  File "C:\Users\Nisarg Mahyavanshi\AppData\Local\Programs\Python\Python39\lib\site-packages\django\middleware\common.py", line 54, in process_request
+    path = self.get_full_path_with_slash(request)
+  File "C:\Users\Nisarg Mahyavanshi\AppData\Local\Programs\Python\Python39\lib\site-packages\django\middleware\common.py", line 88, in get_full_path_with_slash
+    raise RuntimeError(
+RuntimeError: You called this URL via POST, but the URL doesn't end in a slash and you have APPEND_SLASH set. Django can't redirect to the slash URL while maintaining POST data. Change your form to point to 127.0.0.1:8000/book_review/4/6/ (note the trailing slash), or set APPEND_SLASH=False in your Django settings.
+"POST /book_review/4/6 HTTP/1.1" 500 79702
+Forbidden (CSRF token missing.): /book_review/4/6/
+"POST /book_review/4/6/ HTTP/1.1" 403 2506
+Internal Server Error: /book_review/4/6/
+Traceback (most recent call last):
+  File "C:\Users\Nisarg Mahyavanshi\AppData\Local\Programs\Python\Python39\lib\site-packages\django\core\handlers\exception.py", line 56, in inner
+    response = get_response(request)
+  File "C:\Users\Nisarg Mahyavanshi\AppData\Local\Programs\Python\Python39\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "D:\College_Assignments\SEM1\AP Lec labs\Book Review Project\book_review_app\application\views.py", line 73, in book_review_page
+    user_review = Review.objects.create(user=user_id, book=id, reviews=user_review, upvotes=0, downvotes=0)
+  File "C:\Users\Nisarg Mahyavanshi\AppData\Local\Programs\Python\Python39\lib\site-packages\django\db\models\manager.py", line 85, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "C:\Users\Nisarg Mahyavanshi\AppData\Local\Programs\Python\Python39\lib\site-packages\django\db\models\query.py", line 669, in create
+    obj = self.model(**kwargs)
+  File "C:\Users\Nisarg Mahyavanshi\AppData\Local\Programs\Python\Python39\lib\site-packages\django\db\models\base.py", line 541, in __init__
+    _setattr(self, field.name, rel_obj)
+  File "C:\Users\Nisarg Mahyavanshi\AppData\Local\Programs\Python\Python39\lib\site-packages\django\db\models\fields\related_descriptors.py", line 237, in __set__
+    raise ValueError(
+ValueError: Cannot assign "4": "Review.user" must be a "User" instance.
+"POST /book_review/4/6/ HTTP/1.1" 500 93829
+Internal Server Error: /book_review/4/6/
+Traceback (most recent call last):
+  File "C:\Users\Nisarg Mahyavanshi\AppData\Local\Programs\Python\Python39\lib\site-packages\django\db\backends\utils.py", line 89, in _execute
+    return self.cursor.execute(sql, params)
+psycopg2.errors.NotNullViolation: null value in column "review_id" of relation "Review" violates not-null constraint
+DETAIL:  Failing row contains (null, null, null, This is an Awesome Book, 0, 0).
+
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\Nisarg Mahyavanshi\AppData\Local\Programs\Python\Python39\lib\site-packages\django\core\handlers\exception.py", line 56, in inner
+    response = get_response(request)
+  File "C:\Users\Nisarg Mahyavanshi\AppData\Local\Programs\Python\Python39\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "D:\College_Assignments\SEM1\AP Lec labs\Book Review Project\book_review_app\application\views.py", line 73, in book_review_page
+    user_review = Review.objects.create(reviews=user_review, upvotes=0, downvotes=0)
+  File "C:\Users\Nisarg Mahyavanshi\AppData\Local\Programs\Python\Python39\lib\site-packages\django\db\models\manager.py", line 85, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "C:\Users\Nisarg Mahyavanshi\AppData\Local\Programs\Python\Python39\lib\site-packages\django\db\models\query.py", line 671, in create
+    obj.save(force_insert=True, using=self.db)
+  File "C:\Users\Nisarg Mahyavanshi\AppData\Local\Programs\Python\Python39\lib\site-packages\django\db\models\base.py", line 812, in save
+    self.save_base(
+  File "C:\Users\Nisarg Mahyavanshi\AppData\Local\Programs\Python\Python39\lib\site-packages\django\db\models\base.py", line 863, in save_base
+    updated = self._save_table(
+  File "C:\Users\Nisarg Mahyavanshi\AppData\Local\Programs\Python\Python39\lib\site-packages\django\db\models\base.py", line 1006, in _save_table
+    results = self._do_insert(
+  File "C:\Users\Nisarg Mahyavanshi\AppData\Local\Programs\Python\Python39\lib\site-packages\django\db\models\base.py", line 1047, in _do_insert
+    return manager._insert(
+  File "C:\Users\Nisarg Mahyavanshi\AppData\Local\Programs\Python\Python39\lib\site-packages\django\db\models\manager.py", line 85, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "C:\Users\Nisarg Mahyavanshi\AppData\Local\Programs\Python\Python39\lib\site-packages\django\db\models\query.py", line 1791, in _insert
+    return query.get_compiler(using=using).execute_sql(returning_fields)
+  File "C:\Users\Nisarg Mahyavanshi\AppData\Local\Programs\Python\Python39\lib\site-packages\django\db\models\sql\compiler.py", line 1660, in execute_sql
+    cursor.execute(sql, params)
+  File "C:\Users\Nisarg Mahyavanshi\AppData\Local\Programs\Python\Python39\lib\site-packages\django\db\backends\utils.py", line 102, in execute
+    return super().execute(sql, params)
+  File "C:\Users\Nisarg Mahyavanshi\AppData\Local\Programs\Python\Python39\lib\site-packages\django\db\backends\utils.py", line 67, in execute
+    return self._execute_with_wrappers(
+  File "C:\Users\Nisarg Mahyavanshi\AppData\Local\Programs\Python\Python39\lib\site-packages\django\db\backends\utils.py", line 80, in _execute_with_wrappers
+    return executor(sql, params, many, context)
+  File "C:\Users\Nisarg Mahyavanshi\AppData\Local\Programs\Python\Python39\lib\site-packages\django\db\backends\utils.py", line 89, in _execute
+    return self.cursor.execute(sql, params)
+  File "C:\Users\Nisarg Mahyavanshi\AppData\Local\Programs\Python\Python39\lib\site-packages\django\db\utils.py", line 91, in __exit__
+    raise dj_exc_value.with_traceback(traceback) from exc_value
+  File "C:\Users\Nisarg Mahyavanshi\AppData\Local\Programs\Python\Python39\lib\site-packages\django\db\backends\utils.py", line 89, in _execute
+    return self.cursor.execute(sql, params)
+django.db.utils.IntegrityError: null value in column "review_id" of relation "Review" violates not-null constraint
+DETAIL:  Failing row contains (null, null, null, This is an Awesome Book, 0, 0).
+
+"POST /book_review/4/6/ HTTP/1.1" 500 154913
+Internal Server Error: /book_review/4/6/
+Traceback (most recent call last):
+  File "C:\Users\Nisarg Mahyavanshi\AppData\Local\Programs\Python\Python39\lib\site-packages\django\db\backends\utils.py", line 89, in _execute
+    return self.cursor.execute(sql, params)
+psycopg2.errors.NotNullViolation: null value in column "user_id" of relation "Review" violates not-null constraint
+DETAIL:  Failing row contains (1, null, null, An Awesome book!, 0, 0).
+
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\Nisarg Mahyavanshi\AppData\Local\Programs\Python\Python39\lib\site-packages\django\core\handlers\exception.py", line 56, in inner
+    response = get_response(request)
+  File "C:\Users\Nisarg Mahyavanshi\AppData\Local\Programs\Python\Python39\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "D:\College_Assignments\SEM1\AP Lec labs\Book Review Project\book_review_app\application\views.py", line 73, in book_review_page
+    user_review = Review.objects.create(review_id=total_reviews+1, reviews=user_review, upvotes=0, downvotes=0)
+  File "C:\Users\Nisarg Mahyavanshi\AppData\Local\Programs\Python\Python39\lib\site-packages\django\db\models\manager.py", line 85, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "C:\Users\Nisarg Mahyavanshi\AppData\Local\Programs\Python\Python39\lib\site-packages\django\db\models\query.py", line 671, in create
+    obj.save(force_insert=True, using=self.db)
+  File "C:\Users\Nisarg Mahyavanshi\AppData\Local\Programs\Python\Python39\lib\site-packages\django\db\models\base.py", line 812, in save
+    self.save_base(
+  File "C:\Users\Nisarg Mahyavanshi\AppData\Local\Programs\Python\Python39\lib\site-packages\django\db\models\base.py", line 863, in save_base
+    updated = self._save_table(
+  File "C:\Users\Nisarg Mahyavanshi\AppData\Local\Programs\Python\Python39\lib\site-packages\django\db\models\base.py", line 1006, in _save_table
+    results = self._do_insert(
+  File "C:\Users\Nisarg Mahyavanshi\AppData\Local\Programs\Python\Python39\lib\site-packages\django\db\models\base.py", line 1047, in _do_insert
+    return manager._insert(
+  File "C:\Users\Nisarg Mahyavanshi\AppData\Local\Programs\Python\Python39\lib\site-packages\django\db\models\manager.py", line 85, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "C:\Users\Nisarg Mahyavanshi\AppData\Local\Programs\Python\Python39\lib\site-packages\django\db\models\query.py", line 1791, in _insert
+    return query.get_compiler(using=using).execute_sql(returning_fields)
+  File "C:\Users\Nisarg Mahyavanshi\AppData\Local\Programs\Python\Python39\lib\site-packages\django\db\models\sql\compiler.py", line 1660, in execute_sql
+    cursor.execute(sql, params)
+  File "C:\Users\Nisarg Mahyavanshi\AppData\Local\Programs\Python\Python39\lib\site-packages\django\db\backends\utils.py", line 102, in execute
+    return super().execute(sql, params)
+  File "C:\Users\Nisarg Mahyavanshi\AppData\Local\Programs\Python\Python39\lib\site-packages\django\db\backends\utils.py", line 67, in execute
+    return self._execute_with_wrappers(
+  File "C:\Users\Nisarg Mahyavanshi\AppData\Local\Programs\Python\Python39\lib\site-packages\django\db\backends\utils.py", line 80, in _execute_with_wrappers
+    return executor(sql, params, many, context)
+  File "C:\Users\Nisarg Mahyavanshi\AppData\Local\Programs\Python\Python39\lib\site-packages\django\db\backends\utils.py", line 89, in _execute
+    return self.cursor.execute(sql, params)
+  File "C:\Users\Nisarg Mahyavanshi\AppData\Local\Programs\Python\Python39\lib\site-packages\django\db\utils.py", line 91, in __exit__
+    raise dj_exc_value.with_traceback(traceback) from exc_value
+  File "C:\Users\Nisarg Mahyavanshi\AppData\Local\Programs\Python\Python39\lib\site-packages\django\db\backends\utils.py", line 89, in _execute
+    return self.cursor.execute(sql, params)
+django.db.utils.IntegrityError: null value in column "user_id" of relation "Review" violates not-null constraint
+DETAIL:  Failing row contains (1, null, null, An Awesome book!, 0, 0).
+
+"POST /book_review/4/6/ HTTP/1.1" 500 155011
+Not Found: /browse/
+"GET /browse/ HTTP/1.1" 404 3185
+"GET /static/css/hero.jpg HTTP/1.1" 404 1795
+Not Found: /edit_profile//
+"POST /edit_profile// HTTP/1.1" 404 3340
+Not Found: /edit_profile//
+"POST /edit_profile// HTTP/1.1" 404 3340
+Not Found: /edit_profile//
+"POST /edit_profile// HTTP/1.1" 404 3340
+Not Found: /edit_profile/4/edit_profile/4/
+"POST /edit_profile/4/edit_profile/4/ HTTP/1.1" 404 3388
+Not Found: /edit_profile/4/edit_profile/4/
+"POST /edit_profile/4/edit_profile/4/ HTTP/1.1" 404 3388
+"GET /static/css/hero.jpg HTTP/1.1" 404 1795
+Not Found: /delete_review/1
+"POST /delete_review/1 HTTP/1.1" 404 3343
+Not Found: /delete_review/1
+"POST /delete_review/1 HTTP/1.1" 404 3343
+Not Found: /book_review/4/6/delete_review/1
+"POST /book_review/4/6/delete_review/1 HTTP/1.1" 404 3391
+Forbidden (CSRF token missing.): /book_review/4/6/delete_review/1
+"POST /book_review/4/6/delete_review/1 HTTP/1.1" 403 2506
+Forbidden (CSRF token missing.): /book_review/4/6/delete_review/1
+"POST /book_review/4/6/delete_review/1 HTTP/1.1" 403 2506
+Internal Server Error: /book_review/4/6/delete_review/1
+Traceback (most recent call last):
+  File "C:\Users\Nisarg Mahyavanshi\AppData\Local\Programs\Python\Python39\lib\site-packages\django\core\handlers\exception.py", line 56, in inner
+    response = get_response(request)
+  File "C:\Users\Nisarg Mahyavanshi\AppData\Local\Programs\Python\Python39\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+TypeError: book_review_page() got an unexpected keyword argument 'review_id'
+"POST /book_review/4/6/delete_review/1 HTTP/1.1" 500 71083
+Internal Server Error: /book_review/4/6/delete_review/1
+Traceback (most recent call last):
+  File "C:\Users\Nisarg Mahyavanshi\AppData\Local\Programs\Python\Python39\lib\site-packages\django\core\handlers\exception.py", line 56, in inner
+    response = get_response(request)
+  File "C:\Users\Nisarg Mahyavanshi\AppData\Local\Programs\Python\Python39\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "D:\College_Assignments\SEM1\AP Lec labs\Book Review Project\book_review_app\application\views.py", line 123, in delete_review
+    return redirect("/book_review_page/"+user_id+"/"+id)
+TypeError: can only concatenate str (not "int") to str
+"POST /book_review/4/6/delete_review/1 HTTP/1.1" 500 75098
+Not Found: /book_review_page/4/6
+"GET /book_review_page/4/6 HTTP/1.1" 404 3539
+Not Found: /book_review_page/4/6/
+"GET /book_review_page/4/6/ HTTP/1.1" 404 3542
+Internal Server Error: /book_review/4/6/
+Traceback (most recent call last):
+  File "C:\Users\Nisarg Mahyavanshi\AppData\Local\Programs\Python\Python39\lib\site-packages\django\template\smartif.py", line 179, in translate_token
+    op = OPERATORS[token]
+KeyError: 'str(user_id)'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\Nisarg Mahyavanshi\AppData\Local\Programs\Python\Python39\lib\site-packages\django\core\handlers\exception.py", line 56, in inner
+    response = get_response(request)
+  File "C:\Users\Nisarg Mahyavanshi\AppData\Local\Programs\Python\Python39\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "D:\College_Assignments\SEM1\AP Lec labs\Book Review Project\book_review_app\application\views.py", line 112, in book_review_page
+    return render(request, "book_review_page.html", {
+  File "C:\Users\Nisarg Mahyavanshi\AppData\Local\Programs\Python\Python39\lib\site-packages\django\shortcuts.py", line 24, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+  File "C:\Users\Nisarg Mahyavanshi\AppData\Local\Programs\Python\Python39\lib\site-packages\django\template\loader.py", line 61, in render_to_string
+    template = get_template(template_name, using=using)
+  File "C:\Users\Nisarg Mahyavanshi\AppData\Local\Programs\Python\Python39\lib\site-packages\django\template\loader.py", line 15, in get_template
+    return engine.get_template(template_name)
+  File "C:\Users\Nisarg Mahyavanshi\AppData\Local\Programs\Python\Python39\lib\site-packages\django\template\backends\django.py", line 33, in get_template
+    return Template(self.engine.get_template(template_name), self)
+  File "C:\Users\Nisarg Mahyavanshi\AppData\Local\Programs\Python\Python39\lib\site-packages\django\template\engine.py", line 175, in get_template
+    template, origin = self.find_template(template_name)
+  File "C:\Users\Nisarg Mahyavanshi\AppData\Local\Programs\Python\Python39\lib\site-packages\django\template\engine.py", line 157, in find_template
+    template = loader.get_template(name, skip=skip)
+  File "C:\Users\Nisarg Mahyavanshi\AppData\Local\Programs\Python\Python39\lib\site-packages\django\template\loaders\cached.py", line 57, in get_template
+    template = super().get_template(template_name, skip)
+  File "C:\Users\Nisarg Mahyavanshi\AppData\Local\Programs\Python\Python39\lib\site-packages\django\template\loaders\base.py", line 28, in get_template
+    return Template(
+  File "C:\Users\Nisarg Mahyavanshi\AppData\Local\Programs\Python\Python39\lib\site-packages\django\template\base.py", line 154, in __init__
+    self.nodelist = self.compile_nodelist()
+  File "C:\Users\Nisarg Mahyavanshi\AppData\Local\Programs\Python\Python39\lib\site-packages\django\template\base.py", line 200, in compile_nodelist
+    return parser.parse()
+  File "C:\Users\Nisarg Mahyavanshi\AppData\Local\Programs\Python\Python39\lib\site-packages\django\template\base.py", line 513, in parse
+    raise self.error(token, e)
+  File "C:\Users\Nisarg Mahyavanshi\AppData\Local\Programs\Python\Python39\lib\site-packages\django\template\base.py", line 511, in parse
+    compiled_result = compile_func(self, token)
+  File "C:\Users\Nisarg Mahyavanshi\AppData\Local\Programs\Python\Python39\lib\site-packages\django\template\defaulttags.py", line 853, in do_for
+    nodelist_loop = parser.parse(
+  File "C:\Users\Nisarg Mahyavanshi\AppData\Local\Programs\Python\Python39\lib\site-packages\django\template\base.py", line 513, in parse
+    raise self.error(token, e)
+  File "C:\Users\Nisarg Mahyavanshi\AppData\Local\Programs\Python\Python39\lib\site-packages\django\template\base.py", line 511, in parse
+    compiled_result = compile_func(self, token)
+  File "C:\Users\Nisarg Mahyavanshi\AppData\Local\Programs\Python\Python39\lib\site-packages\django\template\defaulttags.py", line 952, in do_if
+    condition = TemplateIfParser(parser, bits).parse()
+  File "C:\Users\Nisarg Mahyavanshi\AppData\Local\Programs\Python\Python39\lib\site-packages\django\template\defaulttags.py", line 885, in __init__
+    super().__init__(*args, **kwargs)
+  File "C:\Users\Nisarg Mahyavanshi\AppData\Local\Programs\Python\Python39\lib\site-packages\django\template\smartif.py", line 170, in __init__
+    mapped_tokens.append(self.translate_token(token))
+  File "C:\Users\Nisarg Mahyavanshi\AppData\Local\Programs\Python\Python39\lib\site-packages\django\template\smartif.py", line 181, in translate_token
+    return self.create_var(token)
+  File "C:\Users\Nisarg Mahyavanshi\AppData\Local\Programs\Python\Python39\lib\site-packages\django\template\defaulttags.py", line 888, in create_var
+    return TemplateLiteral(self.template_parser.compile_filter(value), value)
+  File "C:\Users\Nisarg Mahyavanshi\AppData\Local\Programs\Python\Python39\lib\site-packages\django\template\base.py", line 600, in compile_filter
+    return FilterExpression(token, self)
+  File "C:\Users\Nisarg Mahyavanshi\AppData\Local\Programs\Python\Python39\lib\site-packages\django\template\base.py", line 703, in __init__
+    raise TemplateSyntaxError(
+django.template.exceptions.TemplateSyntaxError: Could not parse the remainder: '(user_id)' from 'str(user_id)'
+"POST /book_review/4/6/ HTTP/1.1" 500 268521
+Not Found: /book_review_page/4/6/
+"GET /book_review_page/4/6/ HTTP/1.1" 404 3542
+Not Found: /book_review_page/4/6/
+"GET /book_review_page/4/6/ HTTP/1.1" 404 3542
+Internal Server Error: /book_review/4/6/
+Traceback (most recent call last):
+  File "C:\Users\Nisarg Mahyavanshi\AppData\Local\Programs\Python\Python39\lib\site-packages\django\db\backends\utils.py", line 89, in _execute
+    return self.cursor.execute(sql, params)
+psycopg2.errors.UniqueViolation: duplicate key value violates unique constraint "Review_pkey"
+DETAIL:  Key (review_id)=(3) already exists.
+
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\Nisarg Mahyavanshi\AppData\Local\Programs\Python\Python39\lib\site-packages\django\core\handlers\exception.py", line 56, in inner
+    response = get_response(request)
+  File "C:\Users\Nisarg Mahyavanshi\AppData\Local\Programs\Python\Python39\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "D:\College_Assignments\SEM1\AP Lec labs\Book Review Project\book_review_app\application\views.py", line 77, in book_review_page
+    user_review = Review.objects.create(review_id=total_reviews+1, user=user, book=book, reviews=user_review, upvotes=0, downvotes=0)
+  File "C:\Users\Nisarg Mahyavanshi\AppData\Local\Programs\Python\Python39\lib\site-packages\django\db\models\manager.py", line 85, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "C:\Users\Nisarg Mahyavanshi\AppData\Local\Programs\Python\Python39\lib\site-packages\django\db\models\query.py", line 671, in create
+    obj.save(force_insert=True, using=self.db)
+  File "C:\Users\Nisarg Mahyavanshi\AppData\Local\Programs\Python\Python39\lib\site-packages\django\db\models\base.py", line 812, in save
+    self.save_base(
+  File "C:\Users\Nisarg Mahyavanshi\AppData\Local\Programs\Python\Python39\lib\site-packages\django\db\models\base.py", line 863, in save_base
+    updated = self._save_table(
+  File "C:\Users\Nisarg Mahyavanshi\AppData\Local\Programs\Python\Python39\lib\site-packages\django\db\models\base.py", line 1006, in _save_table
+    results = self._do_insert(
+  File "C:\Users\Nisarg Mahyavanshi\AppData\Local\Programs\Python\Python39\lib\site-packages\django\db\models\base.py", line 1047, in _do_insert
+    return manager._insert(
+  File "C:\Users\Nisarg Mahyavanshi\AppData\Local\Programs\Python\Python39\lib\site-packages\django\db\models\manager.py", line 85, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "C:\Users\Nisarg Mahyavanshi\AppData\Local\Programs\Python\Python39\lib\site-packages\django\db\models\query.py", line 1791, in _insert
+    return query.get_compiler(using=using).execute_sql(returning_fields)
+  File "C:\Users\Nisarg Mahyavanshi\AppData\Local\Programs\Python\Python39\lib\site-packages\django\db\models\sql\compiler.py", line 1660, in execute_sql
+    cursor.execute(sql, params)
+  File "C:\Users\Nisarg Mahyavanshi\AppData\Local\Programs\Python\Python39\lib\site-packages\django\db\backends\utils.py", line 102, in execute
+    return super().execute(sql, params)
+  File "C:\Users\Nisarg Mahyavanshi\AppData\Local\Programs\Python\Python39\lib\site-packages\django\db\backends\utils.py", line 67, in execute
+    return self._execute_with_wrappers(
+  File "C:\Users\Nisarg Mahyavanshi\AppData\Local\Programs\Python\Python39\lib\site-packages\django\db\backends\utils.py", line 80, in _execute_with_wrappers
+    return executor(sql, params, many, context)
+  File "C:\Users\Nisarg Mahyavanshi\AppData\Local\Programs\Python\Python39\lib\site-packages\django\db\backends\utils.py", line 89, in _execute
+    return self.cursor.execute(sql, params)
+  File "C:\Users\Nisarg Mahyavanshi\AppData\Local\Programs\Python\Python39\lib\site-packages\django\db\utils.py", line 91, in __exit__
+    raise dj_exc_value.with_traceback(traceback) from exc_value
+  File "C:\Users\Nisarg Mahyavanshi\AppData\Local\Programs\Python\Python39\lib\site-packages\django\db\backends\utils.py", line 89, in _execute
+    return self.cursor.execute(sql, params)
+django.db.utils.IntegrityError: duplicate key value violates unique constraint "Review_pkey"
+DETAIL:  Key (review_id)=(3) already exists.
+
+"POST /book_review/4/6/ HTTP/1.1" 500 155171
+Not Found: /book_review
+"GET /book_review HTTP/1.1" 404 3612
+Not Found: /book_review
+"GET /book_review HTTP/1.1" 404 3612
+Not Found: /book_review
+"GET /book_review HTTP/1.1" 404 3613
+Not Found: /book_review
+"GET /book_review HTTP/1.1" 404 3613
+Not Found: /book_review
+"GET /book_review HTTP/1.1" 404 3613

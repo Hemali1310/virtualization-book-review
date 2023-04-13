@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+<head>
+    {% load static %}
+    <link rel="stylesheet" type='text/css' href="{% static 'css/edit_profile_style.css' %}">
+
+<title>Edit Profile</title>
+</head>
+<body>
+    <header class="showcase">
+        <div class="logo">
+            <h1><a href="/">BookFlix</a></h1>
+        </div>
+        <div class="showcase-content">
+            <div class="formm">
+                <form action="/edit_profile/{{user.user_id}}/" method="POST">
+                    {% csrf_token %}
+                    <h1>
+                        <button style="
+                            float: right; 
+                            padding: 10px; 
+                            background-color: maroon;
+                            color: white;
+                            font-weight: bold;
+                            border-style: none;
+                            border-radius: 5px;">
+                        
+                            <a href="/user_profile/{{user.user_id}}/">Go back</a>
+                        
+                        </button>
+                        Edit Profile
+                    </h1>
+                    {% if messages %}
+                        <div style="width: 100%; border: 2px solid greenyellow; padding: 10px; margin-bottom: 15px; border-radius: 10px;">
+                            {% for message in messages %}
+                            <b style="color: greenyellow">{{ message }}</b>
+                            {% endfor %}
+                        </div>
+                    {% endif %}
+
+                    <div class="info">
+                        <label for="username">Username</label>
+                        <input class="email" type="text" value="{{user.username}}" name="username" id="username"> <br>
+                        
+                        <label for="first_name">Firstname</label>
+                        <input class="email" type="text" value="{{user.first_name}}" name="first_name" id="first_name"> <br>
+                        
+                        <label for="last_name">Lastname</label>
+                        <input class="email" type="text" value="{{user.last_name}}" name="last_name" id="last_name"> <br>
+                        
+                        <label for="email">Email</label>
+                        <input class="email" type="email" value="{{user.email}}" name="email" id="email"> <br>
+                        
+                        <label for="password">Password</label>
+                        <input class="email" type="text" value="{{user.password}}" name="password" id="password">
+                    </div>
+                    <div class="btn">
+                        <button class="btn-primary" type="submit">Save</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+        <footer>
+            <div class="ftr-content">
+                <div class="contact">
+                    <a href="#">Quesions? Contact us.</a>
+                </div>
+                <div class="ftr">
+                    <p>Gift Card Terms</p>
+                    <p>Terms of Use</p>
+                    <p>Privacy Statement</p>
+                </div>
+            </div>
+        </footer>
+    </header>
+</body>
+</html>
