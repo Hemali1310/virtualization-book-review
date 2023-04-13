@@ -3,10 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="399cc9e4-d9d0-495b-9f35-5613541e69be" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/book_review_app/django.log" beforeDir="false" afterPath="$PROJECT_DIR$/book_review_app/django.log" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/book_review_app/templates/book_review_page.html" beforeDir="false" afterPath="$PROJECT_DIR$/book_review_app/templates/book_review_page.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/book_review_app/templates/browse.html" beforeDir="false" afterPath="$PROJECT_DIR$/book_review_app/templates/browse.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/book_review_app/templates/user_profile.html" beforeDir="false" afterPath="$PROJECT_DIR$/book_review_app/templates/user_profile.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
